@@ -1,0 +1,59 @@
+ul.sitemap {
+  padding-left: 0;
+  margin: 0;
+}
+
+ul.sitemap,
+ul.sitemap ul {
+  list-style: none;
+}
+
+/* --- Visual indicator for menu items --- */
+ul.sitemap .menu-item::before {
+  content: "› ";
+  margin-right: 0.25em;
+}
+
+/* --- Non-clickable text-only menu items --- */
+ul.sitemap .menu-label {
+  display: inline-block;
+  cursor: default;
+}
+
+/* --- Dropdown indicator for parents with children --- */
+ul.sitemap .menu-item.has-children > .menu-label::after {
+  content: " ▼";
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+
+ul.sitemap.menu-level-0 > .menu-item::before,
+ul.sitemap.menu-level-0 > .menu-item > .menu-link,
+ul.sitemap.menu-level-0 > .menu-item > .menu-label,
+ul.sitemap.menu-level-0 > .menu-item.has-children > .menu-label::after {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+ul.sitemap .menu-level-1 > .menu-item::before,
+ul.sitemap .menu-level-1 > .menu-item > .menu-link,
+ul.sitemap .menu-level-1 > .menu-item > .menu-label,
+ul.sitemap .menu-level-1 > .menu-item.has-children > .menu-label::after {
+  font-weight: 600;
+}
+
+ul.sitemap .menu-level-2 > .menu-item::before,
+ul.sitemap .menu-level-2 > .menu-item > .menu-link,
+ul.sitemap .menu-level-2 > .menu-item > .menu-label,
+ul.sitemap .menu-level-2 > .menu-item.has-children > .menu-label::after {
+  font-weight: 500;
+}
+
+ul.sitemap .menu-level-3 > .menu-item > .menu-link,
+ul.sitemap .menu-level-4 > .menu-item > .menu-link,
+ul.sitemap .menu-level-5 > .menu-item > .menu-link,
+ul.sitemap .menu-level-3 > .menu-item > .menu-label,
+ul.sitemap .menu-level-4 > .menu-item > .menu-label,
+ul.sitemap .menu-level-5 > .menu-item > .menu-label {
+  font-weight: 400;
+}

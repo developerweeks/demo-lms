@@ -1,0 +1,182 @@
+/* Font zie 12 & 14 */
+html.fs-12,
+html.fs-12 body {
+  font-size: var(--solo-px12);
+}
+
+html.fs-14 #page-wrapper ul.primary > li.core-task .task-icon,
+html.fs-12 #page-wrapper ul.primary > li.core-task .task-icon {
+  width: 16px;
+}
+
+html.fs-14 .menu-branding .menu-branding-logo img,
+html.fs-12 .menu-branding .menu-branding-logo img {
+  max-height: 30px;
+}
+
+html.fs-14 #sidebar-button-close button span,
+html.fs-14 #search-button-open button span,
+html.fs-12 #sidebar-button-close button span,
+html.fs-12 #search-button-open button span {
+  padding-block-start: var(--solo-px10) !important;
+  padding-block-end: var(--solo-px10) !important;
+}
+
+html.fs-14 #sidebar-button-open button span,
+html.fs-12 #sidebar-button-open button span {
+  padding-block-start: var(--solo-px6) !important;
+  padding-block-end: var(--solo-px6) !important;
+}
+
+html.fs-12 .solo-search-block-form .form-type-search::before {
+  inset-block-start: 13px;
+  inset-inline-start: 2px;
+}
+
+html.fs-12 .fixed-search-block-inner .solo-search-block-form .form-type-search::before {
+  inset-block-start: 16px;
+}
+
+
+html.fs-12 .solo-inner .login-button-open>button,
+html.fs-12 .solo-inner .navigation__menubar-account li a {
+  line-height: 1.5;
+  padding: 0.688rem!important;
+}
+
+html.fs-14 .solo-inner .login-button-open>button,
+html.fs-14 .solo-inner .navigation__menubar-account li a {
+  line-height: 1.5;
+  padding: 0.688rem!important;
+}
+
+/* Font zie 14 */
+html.fs-14,
+html.fs-14 body {
+  font-size: var(--solo-px14);
+}
+
+html.fs-14 .solo-search-block-form .form-type-search::before {
+  inset-block-start: 16px;
+  inset-inline-start: 5px;
+}
+
+html.fs-14 .fixed-search-block-inner .solo-search-block-form .form-type-search::before {
+  inset-block-start: 20px;
+}
+
+/* Region gaps 12 */
+html.gap-12 .solo-inner .navigation__menubar li.nav__menu-item>a,
+html.gap-12 .solo-inner .navigation__menubar li.nav__menu-item>button {
+  padding-block-start: var(--solo-px8);
+  padding-block-end: var(--solo-px8);
+}
+
+/* Region gaps 14 */
+html.gap-14 .solo-inner .navigation__menubar li.nav__menu-item>a,
+html.gap-14 .solo-inner .navigation__menubar li.nav__menu-item>button {
+  padding-block-start: var(--solo-px10);
+  padding-block-end: var(--solo-px10);
+}
+
+@media (min-width:26rem) {
+
+  /* Region gaps 20 */
+  html.gap-20 .solo-inner .navigation__menubar li.nav__menu-item>a,
+  html.gap-20 .solo-inner .navigation__menubar li.nav__menu-item>button {
+    padding-block-start: var(--solo-px14);
+    padding-block-end: var(--solo-px14);
+  }
+
+  /* Region gaps 24 */
+  html.gap-24 .solo-inner .navigation__menubar li.nav__menu-item>a,
+  html.gap-24 .solo-inner .navigation__menubar li.nav__menu-item>button {
+    padding-block-start: var(--solo-px18);
+    padding-block-end: var(--solo-px18);
+  }
+
+  /* Region gaps 36 */
+  html.gap-36 .solo-inner .navigation__menubar li.nav__menu-item>a,
+  html.gap-36 .solo-inner .navigation__menubar li.nav__menu-item>button {
+    padding-block-start: var(--solo-px20);
+    padding-block-end: var(--solo-px20);
+  }
+
+  /* Region gaps 48 */
+  html.gap-48 .solo-inner .navigation__menubar li.nav__menu-item>a,
+  html.gap-48 .solo-inner .navigation__menubar li.nav__menu-item>button {
+    padding-block-start: var(--solo-px24);
+    padding-block-end: var(--solo-px24);
+  }
+
+  /* Region gaps 64 */
+  html.gap-64 .solo-inner .navigation__menubar li.nav__menu-item>a,
+  html.gap-64 .solo-inner .navigation__menubar li.nav__menu-item>button {
+    padding-block-start: var(--solo-px32);
+    padding-block-end: var(--solo-px32);
+  }
+
+  html.fs-18,
+  html.fs-18 body {
+    font-size: var(--solo-px18);
+  }
+
+  html.fs-18 #sidebar-button-close button span,
+  html.fs-18 #search-button-open button span {
+    padding-block-start: var(--solo-px10) !important;
+    padding-block-end: var(--solo-px10) !important;
+  }
+
+  html.fs-18 #sidebar-button-open button span {
+    padding-block-start: var(--solo-px6) !important;
+    padding-block-end: var(--solo-px6) !important;
+  }
+
+  html.fs-18 .solo-search-block-form .form-type-search::before {
+    inset-block-start: 25px;
+    inset-inline-start: 7px;
+  }
+
+  html.fs-18 .fixed-search-block-inner .solo-search-block-form .form-type-search::before {
+    inset-block-start: 30px;
+  }
+
+  html.fs-18 .solo-inner .login-button-open>button,
+  html.fs-18 .solo-inner .navigation__menubar-account li a {
+    padding: 0.688rem !important;
+    line-height: 1.5;
+  }
+
+  /* Font zie 20 */
+  html.fs-20,
+  html.fs-20 body {
+    font-size: var(--solo-px20);
+  }
+
+  html.fs-20 #sidebar-button-close button span,
+  html.fs-20 #search-button-open button span {
+    padding-block-start: var(--solo-px12) !important;
+    padding-block-end: var(--solo-px12) !important;
+  }
+
+  html.fs-20 #sidebar-button-open button span {
+    padding-block-start: var(--solo-px8) !important;
+    padding-block-end: var(--solo-px8) !important;
+  }
+
+  html.fs-20 .solo-search-block-form .form-type-search::before {
+    inset-block-start: 28px;
+    inset-inline-start: 8px;
+  }
+
+  html.fs-20 .fixed-search-block-inner .solo-search-block-form .form-type-search::before {
+    inset-block-start: 34px;
+  }
+
+  html.fs-20 .solo-inner .login-button-open>button,
+  html.fs-20 .solo-inner .navigation__menubar-account li a {
+    padding: 0.813rem !important;
+    line-height: 1.5;
+  }
+
+}

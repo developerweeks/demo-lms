@@ -1,0 +1,81 @@
+.cke,
+.cke_inner,
+.cke_top,
+.cke_bottom,
+.cke_contents {
+  border: none !important;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: var(--r-bg);
+}
+
+.cke {
+  width: auto !important;
+}
+
+.ck-editor__top,
+.cke_top {
+  border-start-start-radius: var(--solo-px6);
+  border-start-end-radius: var(--solo-px6);
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+  border: var(--solo-px1) solid var(--r-br, var(--r-br-b)) !important;
+}
+
+.cke_contents {
+  border: var(--solo-px1) solid var(--r-br, var(--r-br-b)) !important;
+}
+
+.ck-editor__main,
+.cke_bottom {
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+  border-end-start-radius: var(--solo-px6);
+  border-end-end-radius: var(--solo-px6);
+  border: var(--solo-px1) solid var(--r-br, var(--r-br-b)) !important;
+  border-block-start: none !important;
+}
+
+.text-format-wrapper > .element-container-wrapper {
+  margin-block: var(--solo-px8) auto !important;
+  margin-inline: auto !important;
+  border-radius: var(--solo-px6);
+  border: var(--solo-px1) solid var(--r-br, var(--r-br-b)) !important;
+  background-color: var(--r-bg) !important;
+  padding-block: var(--solo-px8);
+  padding-inline: var(--solo-px16);
+  font-size: var(--solo-px14);
+}
+
+
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
+.ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners,
+.ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners,
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar {
+  border: 0;
+}
+
+.filter-guidelines-item {
+  font-size: var(--solo-px13);
+}
+
+.filter-guidelines-item li {
+  padding-inline-start: 0;
+}
+
+.cke_top,
+.cke_bottom,
+.cke_contents,
+.text-format-wrapper > .element-container-wrapper {
+  border-color: var(--r-br, var(--r-br-b)) !important;
+}
+
+.ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
+  flex-wrap: wrap !important;
+}
+
+.ck-reset_all:not(.ck-reset_all-excluded *),
+.ck.ck-reset_all {
+  color: var(--r-tx) !important;
+  background-color: var(--r-bg) !important;
+}

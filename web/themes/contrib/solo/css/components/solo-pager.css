@@ -1,0 +1,75 @@
+/* General pager styles */
+.pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--solo-px8);
+  margin: var(--solo-px24) 0;
+}
+
+.pager__items {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  line-height: var(--solo-px24);
+  font-size: var(--solo-px14);
+}
+
+.pager__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pager__item a {
+  display: inline-block;
+  padding: var(--solo-px8) var(--solo-px16);
+  border: 1px solid var(--r-br);
+  border-radius: var(--solo-px4);
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.pager__item a:hover,
+.pager__item a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+.pager__item.solo-active-pager {
+  cursor: default !important;
+}
+
+.pager__item.solo-active-pager a {
+  pointer-events: none !important;
+  font-weight: bold;
+  cursor: default;
+  text-decoration: none !important;
+}
+
+.pager__item.pager__item--ellipsis {
+  padding: var(--solo-px8) var(--solo-px16);
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.pager__item.pager__item--ellipsis:focus {
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width:47.99875rem) {
+  .pager__items {
+    gap: var(--solo-px4);
+  }
+
+  .pager__item a {
+    padding: var(--solo-px5) var(--solo-px12);
+    font-size: var(--solo-px14);
+  }
+
+}

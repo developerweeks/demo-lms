@@ -1,0 +1,89 @@
+name: School Zymphonies Theme
+type: theme
+description: 'Designed & Developed by <a href=https://www.zymphonies.com>Zymphonies</a><br/>Contact us for any kind of Drupal services <a href=mailto:info@zymphonies.com>info@zymphonies.com</a>'
+package: core
+base theme: false
+core_version_requirement: ^8 || ^9 || ^10
+
+#libraries
+libraries:
+  - school_zymphonies_theme/bootstrap
+  - school_zymphonies_theme/flexslider
+  - school_zymphonies_theme/fontawesome
+  - school_zymphonies_theme/smartmenus
+  - school_zymphonies_theme/owl
+  - school_zymphonies_theme/global-components
+
+#Regions
+regions:
+
+  #Top Bar
+  message: 'Message'
+  email: 'Email'
+
+  #Header
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  search: 'Search'
+
+  #Top widgets
+  topwidget_title: 'Top widget title'
+  topwidget_first: 'Top first widget'
+  topwidget_second: 'Top second widget'
+  topwidget_third: 'Top third widget' 
+
+  #Global region
+  highlighted: 'Highlighted' 
+  page_title: 'Page title'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+
+  #Services widgets
+  services: 'Services'
+
+  #Products widgets
+  products: 'Products'
+
+  #Team widgets
+  team_title: 'Team title'
+  team_first: 'Team first widget'
+  team_second: 'Team second widget'
+  team_third: 'Team third widget'
+  team_forth: 'Team forth widget'
+
+  #Price table widgets
+  pricetable_title: 'Price table title'
+  pricetable_first: 'Price table first widget'
+  pricetable_second: 'Price table second widget'
+  pricetable_third: 'Price table third widget'
+  pricetable_forth: 'Price table forth widget'
+
+  #Features widgets
+  features_title: 'Features title'
+  features_first: 'Features first widget'
+  features_second: 'Features second widget'
+  features_third: 'Features third widget'
+
+  #Bottom widgets
+  bottom_title: 'Bottom title'
+  bottom_first: 'Bottom first widget'
+  bottom_second: 'Bottom second widget'
+  bottom_third: 'Bottom third widget'
+  bottom_forth: 'Bottom forth widget'
+
+  #Footer widgets
+  footer_title: 'Footer title'
+  footer_first: 'Footer first widget'
+  footer_second: 'Footer second widget'
+  footer_third: 'Footer third widget'
+
+  #Auto hidden
+  auto_hidden_block: 'Auto hidden blocks'
+
+
+# Information added by Drupal.org packaging script on 2024-01-12
+version: '3.0.1'
+project: 'school_zymphonies_theme'
+datestamp: 1705081953

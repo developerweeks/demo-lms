@@ -1,0 +1,9 @@
+  {% if page.highlighted %}
+    <!-- Start: Highlighted -->
+    <div id="highlighted"{% if enable_aria_highlighted %} role="region" aria-label="{{ 'Highlighted Section'|t }}"{% endif %} class="solo-outer lone highlighted{{ classes_highlighted ? ' ' ~ classes_highlighted }}" {{ attributes_highlighted }}>
+      <div id="highlighted-inner" class="solo-inner solo-col solo-col-1 highlighted-inner">
+        {{ page.highlighted }}
+      </div>
+    </div>
+    <!-- End: Highlighted -->
+  {% endif %}

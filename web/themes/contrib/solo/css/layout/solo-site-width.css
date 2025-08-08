@@ -1,0 +1,57 @@
+/* Default rule for sw-100 */
+.page-wrapper.sw-100 > .solo-outer > .solo-inner:not(.primary-sidebar-menu-inner,
+.page-node-type-pb-content .main-container-inner) {
+  max-width: 100%;
+}
+
+/* Define CSS variables for different screen widths */
+.page-wrapper.sw-2560 {
+  --solo-width: var(--solo-rem2560);
+}
+.page-wrapper.sw-1920 {
+  --solo-width: var(--solo-rem1920);
+}
+.page-wrapper.sw-1600 {
+  --solo-width: var(--solo-rem1600);
+}
+.page-wrapper.sw-1440 {
+  --solo-width: var(--solo-rem1440);
+}
+.page-wrapper.sw-1280 {
+  --solo-width: var(--solo-rem1280);
+}
+.page-wrapper.sw-1024 {
+  --solo-width: var(--solo-rem1024);
+}
+.page-wrapper.sw-800 {
+  --solo-width: var(--solo-rem800);
+}
+
+/* Override when .px class is added */
+.px .page-wrapper.sw-2560 {
+  --solo-width: var(--solo-px2560);
+}
+.px .page-wrapper.sw-1920 {
+  --solo-width: var(--solo-px1920);
+}
+.px .page-wrapper.sw-1600 {
+  --solo-width: var(--solo-px1600);
+}
+.px .page-wrapper.sw-1440 {
+  --solo-width: var(--solo-px1440);
+}
+.px .page-wrapper.sw-1280 {
+  --solo-width: var(--solo-px1280);
+}
+.px .page-wrapper.sw-1024 {
+  --solo-width: var(--solo-px1024);
+}
+.px .page-wrapper.sw-800 {
+  --solo-width: var(--solo-px800);
+}
+
+/* Apply max-width dynamically */
+.page-wrapper > .solo-outer > .solo-inner:not(.primary-sidebar-menu-inner,
+.page-node-type-pb-content .main-container-inner) {
+  max-width: var(--solo-width);
+}

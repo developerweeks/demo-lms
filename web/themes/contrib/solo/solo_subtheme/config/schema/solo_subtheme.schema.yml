@@ -1,0 +1,2671 @@
+solo_subtheme.settings:
+  type: mapping
+  label: 'Solo sub-theme settings'
+  mapping:
+    features:
+      type: mapping
+      label: 'Features'
+      mapping:
+        comment_user_picture:
+          type: integer
+          label: 'Comment user picture'
+        comment_user_verification:
+          type: integer
+          label: 'Comment user verification'
+        favicon:
+          type: integer
+          label: 'Favicon'
+        logo:
+          type: boolean
+          label: 'Logo'
+        name:
+          type: boolean
+          label: 'Site name'
+        node_user_picture:
+          type: integer
+          label: 'Node user picture'
+        slogan:
+          type: boolean
+          label: 'Slogan'
+    logo:
+      type: mapping
+      label: 'Logo'
+      mapping:
+        use_default:
+          type: integer
+          label: 'Use default'
+    favicon:
+      type: mapping
+      label: 'Favicon'
+      mapping:
+        use_default:
+          type: integer
+          label: 'Use default'
+    _core:
+      type: mapping
+      label: 'Core'
+      mapping:
+        default_config_hash:
+          type: string
+          label: 'Default config hash'
+    site_node_date_format:
+      type: string
+      label: 'Site node date format'
+    site_reading_mode_content_type:
+      type: mapping
+      label: 'Site reading mode content type'
+      mapping:
+        '*':
+          type: string
+          label: 'Content type machine name'
+
+    disable_search_filters:
+      type: mapping
+      label: 'Disable search filters'
+      mapping:
+        disable_keywords:
+          type: integer
+          label: 'Disable Keywords filter'
+        disable_types:
+          type: integer
+          label: 'Disable Types filter'
+        disable_language:
+          type: integer
+          label: 'Disable Language filter'
+
+    search_result_content_types:
+      type: mapping
+      label: 'Search result content types'
+      mapping:
+        '*':
+          type: string
+          label: 'Content type machine name'
+    enable_teaser_mode:
+      type: boolean
+      label: 'Enable Teaser Mode'
+    enable_aria_highlighted:
+      type: boolean
+      label: 'Enable aria highlighted'
+    primary_menu_depth_info:
+      type: string
+      label: 'Primary menu depth info'
+    enable_aria_welcome:
+      type: boolean
+      label: 'Enable aria welcome'
+    enable_aria_top:
+      type: boolean
+      label: 'Enable aria top'
+    align_sidebar_first:
+      type: string
+      label: 'Align sidebar first'
+    enable_aria_bottom:
+      type: boolean
+      label: 'Enable aria bottom'
+    enable_aria_footer:
+      type: boolean
+      label: 'Enable aria footer'
+    # Section.
+    # ----------------------------
+    sm_icon_telegram:
+      type: string
+      label: Telegram
+    sm_icon_bluesky:
+      type: string
+      label: Bluesky
+    sm_icon_reddit:
+      type: string
+      label: Reddit
+    sm_icon_whatsapp:
+      type: string
+      label: Whatsapp
+    sm_icon_snapchat:
+      type: string
+      label: Snapchat
+    sm_icon_threads:
+      type: string
+      label: Threads
+    sm_icon_tiktok:
+      type: string
+      label: Tiktok
+    sm_icon_facebook:
+      type: string
+      label: Facebook
+    sm_icon_twitter:
+      type: string
+      label: Twitter
+    sm_icon_pinterest:
+      type: string
+      label: Pinterest
+    sm_icon_linkedin:
+      type: string
+      label: Linkedin
+    sm_icon_instagram:
+      type: string
+      label: Instagram
+    sm_icon_youtube:
+      type: string
+      label: Youtube
+    sm_icon_drupal:
+      type: string
+      label: Drupal
+    sm_icon_mastodon:
+      type: string
+      label: Mastodon
+    sm_icon_rss:
+      type: string
+      label: Rss
+    sm_icon_email:
+      type: string
+      label: Email
+    sm_show_icons:
+      type: integer
+      label: Show icons
+    sm_icon_size:
+      type: string
+      label: Icon size
+    sm_icon_colors:
+      type: string
+      label: Icon colors
+    # Section.
+    # ----------------------------
+    footer_copyright:
+      type: string
+      label: Footer copyright
+    footer_link:
+      type: string
+      label: Footer link
+    footer_link_label:
+      type: string
+      label: Footer link label
+    footer_link_text:
+      type: string
+      label: Footer link text
+    # Section.
+    # ----------------------------
+    header_popup_login:
+      type: boolean
+      label: Popup login
+    header_login_links:
+      type: string
+      label: Login links
+    header_sitename_center:
+      type: boolean
+      label: Sitename center
+    header_change_icons:
+      type: boolean
+      label: Change icons
+    header_sitename_center_default:
+      type: boolean
+      label: Sitename center default
+    header_sitename_center_small:
+      type: boolean
+      label: Sitename center small
+    header_logo_image_alt:
+      type: string
+      label: Logo image alt
+    # Section.
+    # ----------------------------
+    count_main:
+      type: integer
+      label: Main region count
+    count_top:
+      type: integer
+      label: Top region count
+    count_bottom:
+      type: integer
+      label: Bottom region count
+    count_footer:
+      type: integer
+      label: Footer region count
+    main_2col:
+      type: string
+      label: Main 2-column layout
+    main_3col:
+      type: string
+      label: Main 3-column layout
+    top_2col:
+      type: string
+      label: Top 2-column layout
+    top_3col:
+      type: string
+      label: Top 3-column layout
+    footer_2col:
+      type: string
+      label: Footer 2-column layout
+    footer_3col:
+      type: string
+      label: Footer 3-column layout
+    bottom_2col:
+      type: string
+      label: Bottom 2-column layout
+    bottom_3col:
+      type: string
+      label: Bottom 3-column layout
+    bottom_4col:
+      type: string
+      label: Bottom 4-column layout
+    enable_per_type_layout_top:
+      type: boolean
+    enable_per_type_layout_main:
+      type: boolean
+    enable_per_type_layout_bottom:
+      type: boolean
+    enable_per_type_layout_footer:
+      type: boolean
+    # Section.
+    # ----------------------------
+    classes_page_wrapper:
+      type: string
+      label: Classes page wrapper
+    classes_highlighted:
+      type: string
+      label: Classes highlighted
+    classes_popup_login_block:
+      type: string
+      label: Classes popup login block
+    classes_fixed_search_block:
+      type: string
+      label: Classes fixed search block
+    classes_header:
+      type: string
+      label: Classes header
+    classes_primary_sidebar_menu:
+      type: string
+      label: Classes primary sidebar menu
+    classes_primary_menu:
+      type: string
+      label: Classes primary menu
+    classes_welcome_text:
+      type: string
+      label: Classes welcome text
+    classes_top_container:
+      type: string
+      label: Classes top container
+    classes_top_first:
+      type: string
+      label: Classes top first
+    classes_top_second:
+      type: string
+      label: Classes top second
+    classes_top_third:
+      type: string
+      label: Classes top third
+    classes_system_messages:
+      type: string
+      label: Classes system messages
+    classes_page_title:
+      type: string
+      label: Classes page title
+    classes_breadcrumb:
+      type: string
+      label: Classes breadcrumb
+    classes_main_container:
+      type: string
+      label: Classes main container
+    classes_sidebar_first:
+      type: string
+      label: Classes sidebar first
+    classes_content:
+      type: string
+      label: Classes content
+    classes_sidebar_second:
+      type: string
+      label: Classes sidebar second
+    classes_bottom_container:
+      type: string
+      label: Classes bottom container
+    classes_bottom_first:
+      type: string
+      label: Classes bottom first
+    classes_bottom_second:
+      type: string
+      label: Classes bottom second
+    classes_bottom_third:
+      type: string
+      label: Classes bottom third
+    classes_bottom_fourth:
+      type: string
+      label: Classes bottom fourth
+    classes_footer_container:
+      type: string
+      label: Classes footer container
+    classes_footer_first:
+      type: string
+      label: Classes footer first
+    classes_footer_second:
+      type: string
+      label: Classes footer second
+    classes_footer_third:
+      type: string
+      label: Classes footer third
+    classes_footer_menu:
+      type: string
+      label: Classes footer menu
+    classes_credit_copyright:
+      type: string
+      label: Classes credit copyright
+    # Section.
+    # ----------------------------
+    enable_block_title_visibility:
+      type: integer
+      label: Custom Block Title is Enabled
+    disable_block_title_visibility:
+      type: integer
+      label: Custom Block Title is Disabled
+    site_global_width:
+      type: string
+      label: Global width
+    site_global_breakpoints:
+      type: string
+      label: Global breakpoints
+    site_global_regions_gap:
+      type: integer
+      label: Global regions gap
+    site_global_regions_gab:
+      type: string
+      label: Global regions gab
+    site_global_font_size:
+      type: integer
+      label: Global font size
+    site_menu_breakpoints:
+      type: string
+      label: Menu breakpoints
+    site_mobile_layout_order:
+      type: string
+      label: Mobile layout order
+    enable_px_based_widths:
+      type: integer
+      label: Enable PX based widths
+    enable_custom_widths:
+      type: integer
+      label: Enable custom widths
+    enable_custom_node_width:
+      type: integer
+      label: Enable custom node width
+    enable_custom_node_width_message:
+      type: integer
+      label: Enable custom node width Message
+    # Section.
+    # ----------------------------
+    site_font_google_local_on:
+      type: boolean
+      label: Google font local
+    site_font_awesome_on:
+      type: string
+      label: Font awesome on
+    site_font_google_global_on:
+      type: string
+      label: Global Google font
+    site_font_google_heading_on:
+      type: string
+      label: Heading Google font
+    site_font_google_special_on:
+      type: string
+      label: Special Google font
+    site_import_google_font:
+      type: string
+      label: Import Google font
+    site_import_googel_font:
+      type: string
+      label: Import Google font (alt)
+    site_name_animate_on:
+      type: string
+      label: Site name animation
+    site_name_font_size_s:
+      type: string
+      label: Site name font size (small)
+    site_name_font_size_l:
+      type: string
+      label: Site name font size (large)
+    site_name_google_font:
+      type: string
+      label: Site name Google font
+    site_pagetitle_animate_on:
+      type: string
+      label: Page title animation
+    site_pagetitle_font_size_s:
+      type: string
+      label: Page title font size (small)
+    site_pagetitle_font_size_l:
+      type: string
+      label: Page title font size (large)
+    site_pagetitle_google_font:
+      type: string
+      label: Page title Google font
+    site_pagetitle_center:
+      type: boolean
+      label: Center page title
+    # Section.
+    # ----------------------------
+    site_regions_main_rounded:
+      type: string
+      label: Main regions rounded
+    site_regions_main_border:
+      type: boolean
+      label: Main regions border
+    site_regions_top_disable:
+      type: string
+      label: Disable top regions
+    site_regions_top_rounded:
+      type: string
+      label: Top regions rounded
+    site_regions_top_animate:
+      type: boolean
+      label: Animate top regions
+    site_regions_top_border:
+      type: boolean
+      label: Top regions border
+    site_regions_top_animate_border:
+      type: boolean
+      label: Top animate border
+    site_regions_top_animate_hover:
+      type: boolean
+      label: Top animate hover
+    site_regions_bottom_disable:
+      type: string
+      label: Disable bottom regions
+    site_regions_bottom_rounded:
+      type: string
+      label: Bottom regions rounded
+    site_regions_bottom_animate:
+      type: boolean
+      label: Animate bottom regions
+    site_regions_bottom_border:
+      type: boolean
+      label: Bottom regions border
+    site_regions_bottom_animate_border:
+      type: boolean
+      label: Bottom animate border
+    site_regions_bottom_animate_hover:
+      type: boolean
+      label: Bottom animate hover
+    site_regions_footer_disable:
+      type: string
+      label: Disable footer regions
+    site_regions_footer_rounded:
+      type: string
+      label: Footer regions rounded
+    site_regions_footer_animate:
+      type: boolean
+      label: Animate footer regions
+    site_regions_footer_border:
+      type: boolean
+      label: Footer regions border
+    site_regions_footer_animate_border:
+      type: boolean
+      label: Footer animate border
+    site_regions_footer_animate_hover:
+      type: boolean
+      label: Footer animate hover
+    site_regions_highlighted_disable:
+      type: string
+      label: Disable highlighted regions
+    site_regions_welcome_disable:
+      type: string
+      label: Disable welcome region
+    site_regions_welcome_width:
+      type: integer
+      label: Welcome region width
+    site_regions_collapse_order:
+      type: integer
+      label: Collapse order
+    # Section.
+    # ----------------------------
+    site_login_page_on:
+      type: integer
+      label: Login page on
+    site_flip_header_menu:
+      type: integer
+      label: Flip header menu
+    site_opacity_onscroll_on:
+      type: boolean
+      label: Opacity on scroll
+    site_inline_items_on:
+      type: boolean
+      label: Inline items on
+    site_load_w3css_on:
+      type: boolean
+      label: Load W3CSS
+    site_breadcrumb_pagetitle_off:
+      type: boolean
+      label: Breadcrumb page title off
+    site_breadcrumb_scroll:
+      type: integer
+      label: Breadcrumb scroll
+    opacity_page_wrapper:
+      type: boolean
+      label: Opacity page wrapper
+    skip_header_content:
+      type: boolean
+      label: Skip header content
+    skip_navigation_content:
+      type: boolean
+      label: Skip navigation content
+    skip_main_content:
+      type: boolean
+      label: Skip main content
+    skip_footer_content:
+      type: boolean
+      label: Skip footer content
+    site_flip_main_left:
+      type: boolean
+      label: Flip main left
+    # Section.
+    # ----------------------------
+    site_css_injector:
+      type: string
+      label: CSS injector
+    site_css_dynamic:
+      type: string
+      label: Dynamic CSS
+    site_js_dynamic:
+      type: string
+      label: Dynamic JS
+    color_coded_system_tabs:
+      type: integer
+      label: Color coded system tabs
+    system_messages_disable_dark:
+      type: boolean
+      label: Disable dark system messages
+
+    # Section.
+    # ----------------------------
+    current_theme:
+      type: boolean
+      label: Current theme
+    theme_category:
+      type: string
+      label: Theme category
+    predefined_current_theme:
+      type: string
+      label: Predefined current theme
+    # Section.
+    # ----------------------------
+    primary_menu_on_hover:
+      type: boolean
+      label: Primary menu on hover
+    primary_menu_border:
+      type: boolean
+      label: Primary menu border
+    primary_menu_justify_content:
+      type: boolean
+      label: Primary menu justify content
+    primary_menu_megamenu:
+      type: boolean
+      label: Primary menu megamenu
+    primary_menu_megamenu_layout:
+      type: string
+      label: Primary menu megamenu layout
+    primary_menu_submenu_header:
+      type: boolean
+      label: Primary menu submenu header
+    primary_sidebar_menu_border:
+      type: boolean
+      label: Primary sidebar menu border
+    primary_menu_align_center:
+      type: boolean
+      label: Primary menu align center
+    primary_menu_keyboard:
+      type: boolean
+      label: Primary menu keyboard
+    primary_menu_arrow_hover:
+      type: boolean
+      label: Primary menu arrow hover
+    primary_menu_alignment:
+      type: string
+      label: Primary menu alignment
+    primary_sidebar_menu_hover:
+      type: boolean
+      label: Primary sidebar menu hover
+    primary_menu_expand_left:
+      type: boolean
+      label: Primary menu expand left
+    primary_sidebar_menu_branding:
+      type: boolean
+      label: Primary sidebar menu branding
+    primary_menu_branding:
+      type: boolean
+      label: Primary menu branding
+    # Section.
+    # ----------------------------
+    align_top_first:
+      type: string
+      label: Align top first
+    align_top_second:
+      type: string
+      label: Align top second
+    align_top_third:
+      type: string
+      label: Align top third
+    align_content:
+      type: string
+      label: Align content
+    align_sidebar_second:
+      type: string
+      label: Align sidebar second
+    align_bottom_first:
+      type: string
+      label: Align bottom first
+    align_bottom_second:
+      type: string
+      label: Align bottom second
+    align_bottom_third:
+      type: string
+      label: Align bottom third
+    align_bottom_fourth:
+      type: string
+      label: Align bottom fourth
+    align_footer_first:
+      type: string
+      label: Align footer first
+    align_footer_second:
+      type: string
+      label: Align footer second
+    align_footer_third:
+      type: string
+      label: Align footer third
+    # Section.
+    # ----------------------------
+    settings_popup_login_block___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_popup_login_block___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_popup_login_block___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_popup_login_block___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_popup_login_block___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_popup_login_block___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_popup_login_block___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_popup_login_block___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_popup_login_block___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_popup_login_block___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_popup_login_block___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_popup_login_block___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_popup_login_block___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_popup_login_block___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_popup_login_block___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_page_wrapper___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_page_wrapper___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_page_wrapper___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_page_wrapper___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_page_wrapper___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_page_wrapper___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_page_wrapper___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_page_wrapper___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_page_wrapper___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_page_wrapper___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_page_wrapper___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_page_wrapper___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_page_wrapper___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_page_wrapper___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_page_wrapper___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_fixed_search_block___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_fixed_search_block___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_fixed_search_block___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_fixed_search_block___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_fixed_search_block___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_fixed_search_block___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_fixed_search_block___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_fixed_search_block___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_fixed_search_block___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_fixed_search_block___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_fixed_search_block___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_fixed_search_block___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_fixed_search_block___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_fixed_search_block___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_fixed_search_block___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_header___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_header___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_header___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_header___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_header___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_header___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_header___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_header___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_header___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_header___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_header___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_header___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_header___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_header___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_header___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_primary_menu___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_primary_menu___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_primary_menu___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_primary_menu___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_primary_menu___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_primary_menu___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_primary_menu___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_primary_menu___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_primary_menu___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_primary_menu___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_primary_menu___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_primary_menu___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_primary_menu___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_primary_menu___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_primary_menu___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_system_messages___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_system_messages___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_system_messages___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_system_messages___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_system_messages___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_system_messages___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_system_messages___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_system_messages___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_system_messages___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_system_messages___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_system_messages___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_system_messages___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_system_messages___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_system_messages___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_system_messages___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_page_title___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_page_title___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_page_title___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_page_title___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_page_title___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_page_title___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_page_title___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_page_title___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_page_title___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_page_title___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_page_title___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_page_title___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_page_title___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_page_title___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_page_title___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_breadcrumb___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_breadcrumb___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_breadcrumb___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_breadcrumb___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_breadcrumb___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_breadcrumb___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_breadcrumb___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_breadcrumb___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_breadcrumb___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_breadcrumb___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_breadcrumb___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_breadcrumb___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_breadcrumb___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_breadcrumb___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_breadcrumb___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_main_container___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_main_container___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_main_container___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_main_container___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_main_container___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_main_container___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_main_container___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_main_container___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_main_container___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_main_container___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_main_container___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_main_container___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_main_container___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_main_container___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_main_container___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_content___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_content___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_content___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_content___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_content___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_content___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_content___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_content___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_content___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_content___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_content___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_content___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_content___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_content___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_content___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_sidebar_second___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_sidebar_second___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_sidebar_second___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_sidebar_second___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_sidebar_second___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_sidebar_second___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_sidebar_second___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_sidebar_second___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_sidebar_second___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_sidebar_second___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_sidebar_second___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_sidebar_second___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_sidebar_second___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_sidebar_second___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_sidebar_second___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_sidebar_first___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_sidebar_first___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_sidebar_first___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_sidebar_first___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_sidebar_first___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal state.
+    settings_sidebar_first___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or focused.
+    settings_sidebar_first___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_sidebar_first___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_sidebar_first___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this region.
+    settings_sidebar_first___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_sidebar_first___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within this region.
+    settings_sidebar_first___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_sidebar_first___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_sidebar_first___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_sidebar_first___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this region.
+    # Section.
+    # ----------------------------
+    settings_footer_menu___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_footer_menu___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_footer_menu___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_footer_menu___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_footer_menu___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_footer_menu___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_footer_menu___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_footer_menu___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_footer_menu___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_footer_menu___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_footer_menu___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_footer_menu___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_footer_menu___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_footer_menu___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_footer_menu___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_credit_copyright___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_credit_copyright___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_credit_copyright___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_credit_copyright___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_credit_copyright___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_credit_copyright___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_credit_copyright___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_credit_copyright___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_credit_copyright___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_credit_copyright___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_credit_copyright___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_credit_copyright___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_credit_copyright___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_credit_copyright___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_credit_copyright___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_primary_sidebar_menu___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_primary_sidebar_menu___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_primary_sidebar_menu___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_primary_sidebar_menu___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_primary_sidebar_menu___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_primary_sidebar_menu___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_primary_sidebar_menu___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_primary_sidebar_menu___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_primary_sidebar_menu___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_primary_sidebar_menu___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_primary_sidebar_menu___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_primary_sidebar_menu___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_primary_sidebar_menu___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_primary_sidebar_menu___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_primary_sidebar_menu___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_top_container___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_top_container___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_top_container___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_top_container___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_top_container___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_top_container___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_top_container___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_top_container___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_top_container___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_top_container___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_top_container___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_top_container___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_top_container___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_top_container___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_top_container___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_top_first___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_top_first___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_top_first___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_top_first___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_top_first___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_top_first___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_top_first___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_top_first___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_top_first___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_top_first___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_top_first___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_top_first___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_top_first___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_top_first___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_top_first___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_top_second___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_top_second___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_top_second___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_top_second___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_top_second___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_top_second___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_top_second___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_top_second___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_top_second___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_top_second___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_top_second___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_top_second___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_top_second___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_top_second___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_top_second___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_top_third___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_top_third___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_top_third___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_top_third___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_top_third___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_top_third___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_top_third___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_top_third___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_top_third___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_top_third___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_top_third___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_top_third___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_top_third___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_top_third___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_top_third___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_bottom_container___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_bottom_container___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_bottom_container___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_bottom_container___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_bottom_container___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_bottom_container___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_bottom_container___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_bottom_container___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_bottom_container___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_bottom_container___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_bottom_container___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_bottom_container___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_bottom_container___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_bottom_container___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_bottom_container___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_bottom_first___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_bottom_first___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_bottom_first___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_bottom_first___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_bottom_first___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_bottom_first___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_bottom_first___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_bottom_first___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_bottom_first___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_bottom_first___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_bottom_first___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_bottom_first___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_bottom_first___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_bottom_first___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_bottom_first___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_bottom_second___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_bottom_second___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_bottom_second___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_bottom_second___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_bottom_second___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_bottom_second___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_bottom_second___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_bottom_second___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_bottom_second___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_bottom_second___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_bottom_second___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_bottom_second___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_bottom_second___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_bottom_second___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_bottom_second___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_bottom_third___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_bottom_third___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_bottom_third___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_bottom_third___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_bottom_third___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_bottom_third___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_bottom_third___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_bottom_third___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_bottom_third___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_bottom_third___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_bottom_third___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_bottom_third___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_bottom_third___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_bottom_third___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_bottom_third___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_bottom_fourth___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_bottom_fourth___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_bottom_fourth___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_bottom_fourth___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_bottom_fourth___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_bottom_fourth___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_bottom_fourth___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_bottom_fourth___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_bottom_fourth___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_bottom_fourth___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_bottom_fourth___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_bottom_fourth___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_bottom_fourth___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_bottom_fourth___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_bottom_fourth___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_footer_container___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_footer_container___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_footer_container___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_footer_container___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_footer_container___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_footer_container___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_footer_container___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_footer_container___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_footer_container___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_footer_container___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_footer_container___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_footer_container___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_footer_container___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_footer_container___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_footer_container___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_footer_first___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_footer_first___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_footer_first___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_footer_first___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_footer_first___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_footer_first___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_footer_first___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_footer_first___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_footer_first___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_footer_first___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_footer_first___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_footer_first___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_footer_first___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_footer_first___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_footer_first___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_footer_second___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_footer_second___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_footer_second___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_footer_second___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_footer_second___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_footer_second___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_footer_second___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_footer_second___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_footer_second___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_footer_second___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_footer_second___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_footer_second___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_footer_second___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_footer_second___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_footer_second___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_footer_third___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_footer_third___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_footer_third___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_footer_third___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_footer_third___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_footer_third___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_footer_third___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_footer_third___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_footer_third___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_footer_third___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_footer_third___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_footer_third___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_footer_third___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_footer_third___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_footer_third___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_highlighted___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_highlighted___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_highlighted___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_highlighted___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_highlighted___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_highlighted___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_highlighted___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_highlighted___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_highlighted___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_highlighted___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_highlighted___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_highlighted___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_highlighted___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_highlighted___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_highlighted___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.
+    # Section.
+    # ----------------------------
+    settings_welcome_text___r_bg_fr:
+      type: string
+      label: Form background color
+      description: Sets the background color for forms within this region.
+    settings_welcome_text___r_bg:
+      type: string
+      label: Background color
+      description: Sets the overall background color for this region.
+    settings_welcome_text___r_tx:
+      type: string
+      label: Text color
+      description: Sets the default text color for this region.
+    settings_welcome_text___r_h1:
+      type: string
+      label: Heading color
+      description: Sets the color for h1, h2, h3 headings within this region.
+    settings_welcome_text___r_lk:
+      type: string
+      label: Link color
+      description: Sets the color for links within this region in their normal
+        state.
+    settings_welcome_text___r_lk_h:
+      type: string
+      label: Link hover color
+      description: Sets the color for links within this region when hovered or
+        focused.
+    settings_welcome_text___r_br:
+      type: string
+      label: Border color
+      description: Sets the border color for this region.
+    settings_welcome_text___r_tx_lk:
+      type: string
+      label: Menu link text color
+      description: Sets the text color for menu links within this region.
+    settings_welcome_text___r_tx_lk_h:
+      type: string
+      label: Menu link hover text color
+      description: Sets the hover/focus text color for menu links within this
+        region.
+    settings_welcome_text___r_bg_lk:
+      type: string
+      label: Menu link background color
+      description: Sets the background color for menu links within this region.
+    settings_welcome_text___r_bg_lk_h:
+      type: string
+      label: Menu link hover background color
+      description: Sets the hover/focus background color for menu links within
+        this region.
+    settings_welcome_text___r_tx_bt:
+      type: string
+      label: Button text color
+      description: Sets the text color for buttons within this region.
+    settings_welcome_text___r_tx_bt_h:
+      type: string
+      label: Button hover text color
+      description: Sets the hover/focus text color for buttons within this region.
+    settings_welcome_text___r_bg_bt:
+      type: string
+      label: Button background color
+      description: Sets the background color for buttons within this region.
+    settings_welcome_text___r_bg_bt_h:
+      type: string
+      label: Button hover background color
+      description: Sets the hover/focus background color for buttons within this
+        region.

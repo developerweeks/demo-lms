@@ -1,0 +1,37 @@
+{#
+  Handles block title visibility based on theme setting.
+  Expected variables:
+    - solo_block_title_visibility_enabled (bool)
+    - configuration.solo_block_title_visibility
+    - configuration.label
+    - title_attributes
+    - heading_id
+    - title_prefix
+    - title_suffix
+#}
+
+{# Title rendering with support for Solo visibility mode and menu block IDs #}
+
+{% set title_mode = configuration.solo_block_title_visibility ?? 'visible' %}
+{% set show_title = title_mode != 'none' %}
+{% set is_hidden = title_mode == 'visually_hidden' %}
+{% set block_label = configuration.label is defined ? configuration.label : label %}
+
+{# Always set title_attributes safely #}
+{% if title_attributes is not defined %}
+  {% set title_attributes = create_attribute() %}
+{% endif %}
+{% if heading_id is defined %}
+  {% set title_attributes = title_attributes.setAttribute('id', heading_id) %}
+{% endif %}
+{% if is_hidden %}
+  {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+{% endif %}
+
+{% if show_title and block_label %}
+  {{ title_prefix }}
+  {% set tag = configuration.solo_block_title_tag ?? 'h2' %}
+  <{{ tag }}{{ title_attributes.addClass('block__title') }}>{{ block_label }}</{{ tag }}>
+  {{ title_suffix }}
+{% endif %}
+

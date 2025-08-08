@@ -1,0 +1,213 @@
+.solo-select-multi,
+.solo-select-multi * {
+  box-sizing: border-box !important;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.solo-select-multi {
+  all: unset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+  width: auto;
+  border: none;
+  padding: 0;
+  background: var(--r-bg);
+}
+
+.solo-select-multi-content,
+.solo-select-multi-content *,
+.solo-select-multi-header,
+.solo-select-multi-header * {
+  line-height: 1.6;
+  font-size: inherit;
+  color: inherit;
+}
+
+.solo-select-multi-header {
+  padding: var(--solo-px8) var(--solo-px10);
+}
+
+.solo-select-multi-content > .options-inner > * {
+  padding: var(--solo-px4) var(--solo-px10) !important;
+}
+
+.solo-select-multi-content,
+.solo-select-multi-header {
+  display: flex;
+  align-items: flex-start;
+  width: auto;
+  min-width: 300px;
+  border: var(--solo-px1) solid var(--r-br, var(--r-br-b));
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  background: var(--r-header-bg);
+  color: var(--r-header-tx);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out; /* Smoother & faster */
+}
+
+.solo-select-multi-header .solo-multi-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.solo-select-multi-header .solo-multi-tag .solo-multi-tag-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--r-bg);
+  padding: 4px 6px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.solo-select-multi-header .solo-multi-tag .solo-multi-tag-item .remove-tag {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.solo-select-multi-header .solo-multi-tag .solo-multi-tag-item .remove-tag .icon-delete {
+  width: 16px;
+  height: 16px;
+  transition: fill 0.2s ease;
+}
+
+.solo-select-multi-content .multi-select-footer:hover svg,
+.solo-select-multi-header .select-multi-header-arrow:hover svg,
+.solo-select-multi-header .solo-multi-tag .solo-multi-tag-item .remove-tag:hover svg {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.solo-select-multi-header .select-multi-header-arrow {
+  margin-left: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  transition: transform 0.3s ease-in-out;
+  line-height: 1;
+}
+
+.solo-select-multi-header .select-multi-header-arrow svg {
+  height: 28px;
+  width: 28px;
+  fill: var(--r-tx);
+  transition: transform 0.3s ease-in-out;
+}
+
+.multi-opened .solo-select-multi-header .select-multi-header-arrow svg {
+  transform: rotate(180deg);
+}
+
+.solo-select-multi-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: none;
+  z-index: 100;
+}
+
+.solo-select-multi-content .solo-select-multi-option {
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: inherit;
+  text-align: var(--solo-text-align-start);
+  font-size: 95%;
+}
+
+.solo-select-multi.dropdown .solo-select-multi-option {
+  cursor: default;
+}
+
+.solo-select-multi-content .solo-select-multi-option {
+  display: flex;
+  align-items: center;
+}
+
+.solo-select-multi-content .solo-select-multi-option label {
+  padding: 0 8px;
+  margin: 0;
+}
+
+.solo-select-multi .solo-select-multi-header:hover,
+.solo-select-multi-content .multi-select-footer:hover,
+.solo-select-multi-content .solo-select-multi-option:hover {
+  background: var(--r-bg);
+}
+
+.solo-select-multi-content .multi-select-footer {
+  display: grid;
+}
+
+.solo-select-multi-content .multi-select-footer button,
+.solo-select-multi-content .multi-select-footer button span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.solo-select-multi-content .multi-select-footer button {
+  padding: var(--solo-px4) 0;
+  color: var(--r-tx-bt-h);
+  background-color: var(--r-bg-bt-h);
+}
+
+.solo-select-multi-content .options-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.solo-select-multi-content .search-input {
+  position: relative;
+}
+
+.solo-select-multi-content .search-input input {
+  padding: var(--solo-px6) var(--solo-px8) var(--solo-px6) var(--solo-px32);
+  border-radius: 8px;
+}
+
+.solo-select-multi-content .search-input .manage-search {
+  position: absolute;
+  left: 18px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.solo-select-multi-content .multi-clear-all svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* RTL Support */
+[dir="rtl"] .solo-select-multi {
+  text-align: right;
+}
+
+[dir="rtl"] .solo-select-multi-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .select-multi-header-arrow {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,24 @@
+{
+  "name": "aristotle",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite build --watch",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "sass": "^1.66.1",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "bootstrap-select": "^1.13.18",
+    "popper.js": "^1.16.1"
+  }
+}

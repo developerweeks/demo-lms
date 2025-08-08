@@ -1,0 +1,7 @@
+solo-subtheme-global:
+  css:
+    theme:
+      css/solo-subtheme-style.css: {}
+
+  js:
+    js/solo-subtheme-script.js: {}

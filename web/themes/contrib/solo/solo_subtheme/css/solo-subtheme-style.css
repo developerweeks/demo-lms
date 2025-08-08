@@ -1,0 +1,101 @@
+/* Add your css code here */
+/*
+Variable Definitions:
+  --r-bg: Region background color. Sets the overall background color of the region wrapper.
+  --r-tx: Region text color. Sets the default text color for all paragraph and inline text within the region.
+  --r-h1: Region heading color. Specifically sets the color for headings (h1, h2, h3) within the region, allowing heading color control independently from body text.
+  --r-lk: Region link color. Sets the color for anchor (<a>) links within the region in their normal (non-hover) state.
+  --r-lk-h: Region link hover color. Sets the color of links within the region when hovered or focused, providing clear interactive feedback.
+  --r-br: Region border color. Sets the border color for the region, useful for visual separation of sections.
+  --r-bg-fr: Form background color within the region. Sets the background color specifically for input forms (e.g., login forms, search bars) within the region, enabling clear visual separation of form areas.
+  --r-tx-lk: Menu link text color within the region. Sets the text color for menu links in navigation blocks or region-based menus, ensuring consistency with your theme’s navigation design.
+  --r-tx-lk-h: Menu link hover text color within the region. Sets the hover or focus color for menu link text, aiding in clear navigation feedback for users.
+  --r-bg-lk: Menu link background color within the region. Sets the background color of menu links in their normal state within the region for better menu styling control.
+  --r-bg-lk-h: Menu link background hover color within the region. Sets the background color for menu links on hover/focus, ensuring clear user interaction indication.
+  --r-tx-bt:  Button text color within the region. Sets the text color for buttons within the region (e.g., call-to-action buttons, form submit buttons).
+  --r-tx-bt-h: Button text hover color within the region. Sets the text color for buttons when hovered/focused, providing interactive feedback.
+  --r-bg-bt: Button background color within the region. Sets the background color for buttons in their normal state, aligning them visually with your design system.
+  --r-bg-bt-h:  Button background hover color within the region. Sets the background color for buttons on hover/focus, improving interactivity and user experience.
+*/
+
+/*
+Regions Names, each region has an ID and a Class with the same name.
+You can use .page-wrapper or #page-wrapper
+#page-wrapper {}
+#primary-sidebar-menu {}
+#fixed-search-block {}
+#popup-login-block {}
+#header {}
+#primary-menu {}
+#welcome-text {}
+
+#top-container {}
+#top-box-first {}
+#top-box-second {}
+#top-box-third {}
+
+#system-messages {}
+#breadcrumb {}
+#page-title {}
+
+#main-container {}
+#sidebar-box-first {}
+#sidebar-box-main {}
+#sidebar-box-second {}
+
+#bottom-container {}
+#bottom-box-first {}
+#bottom-box-second {}
+#bottom-box-third {}
+#bottom-box-fourth {}
+
+#footer-container {}
+#footer-box-first {}
+#footer-box-second {}
+#footer-box-third {}
+
+#footer-menu {}
+#copyright {}
+
+Examples:
+
+#page-wrapper {
+  background-color: var(--r-bg);
+  color: var(--r-tx);
+  border-color: var(--r-br);
+}
+
+h1, h2, h3 {
+  color: var(--r-h1);
+}
+
+a:not(li.nav__menu-item a) {
+  color: var(--r-lk);
+  color: var(--r-lk-h);
+}
+
+input:not(.button) {
+  background-color: var(--r-bg-fr);
+}
+
+li.nav__menu-item a {
+  color: var(--r-tx-lk);
+  background-color: var(--r-bg-lk);
+}
+
+li.nav__menu-item a:hover {
+  color: var(--r-tx-lk-h);
+  background-color: var(--r-bg-lk-h);
+}
+
+button:not(li.nav__menu-item button) {
+  color: var(--r-tx-bt);
+  background-color: var(--r-bg-bt);
+}
+
+button:not(li.nav__menu-item button):hover {
+  color: var(--r-tx-bt-h);
+  background-color: var(--r-bg-bt-h);
+}
+https://www.drupal.org/docs/extending-drupal/themes/contributed-themes/solo/instructions-for-developers-on-using-colors-in-solo-theme
+*/

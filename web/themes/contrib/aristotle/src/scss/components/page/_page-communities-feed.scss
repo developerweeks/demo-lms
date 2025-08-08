@@ -1,0 +1,54 @@
+.section-communities-feed{
+  .your-community {
+     > .btn {
+      margin-bottom: rem(10);
+     }
+
+     .content-box__title{
+        margin-bottom: rem(20);
+     }
+
+     .active{
+        background-color: $clr-green;
+        position: relative;
+
+        &::before{
+         content: "";
+         width: rem(29);
+         height: rem(29);
+         border-radius: 50%;
+         background: $clr-white url(./images/design/newsfeed.svg) center no-repeat;
+         margin-right: rem(10);
+        }
+     }
+
+     .communities-list-inner{
+        margin-top: 0;
+     }
+
+     .communities-list{
+      .community-link-item {
+         &:hover{
+             background-color: $clr-gray-light-D5;
+         }
+      }
+    }
+   }
+   .back-btn {
+      @include media-breakpoint-down(md) {
+        display: block !important;
+      }
+    }
+
+    .join-communities-page-title {
+      @include media-breakpoint-down(sm) {
+        grid-template-columns: 1fr;
+        justify-items: normal;
+      }
+      h1{
+       @include media-breakpoint-down(sm){
+         text-align: center;
+       }
+      }
+   }
+}

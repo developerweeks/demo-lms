@@ -1,0 +1,43 @@
+/**
+ * @file
+ * Default style for file module.
+ */
+.solo-file-upload-wrapper {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+.solo-file-native {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.solo-file-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 7px 7px 0;
+  transition: 0.3s;
+}
+
+.page-wrapper .solo-file-button {
+  white-space: nowrap;
+  border: 2px solid var(--r-br, var(--r-br-b));
+}
+
+.solo-file-name {
+  opacity: 0.7;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

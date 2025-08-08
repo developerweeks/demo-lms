@@ -1,0 +1,33 @@
+.view-latest-active-trainings {
+  &.view-id-latest_active_trainings {
+    .views-row {
+      margin-bottom: rem(20);
+    }
+
+    .views-field-label {
+      font-size: rem($font-size-sm);
+      margin-bottom: rem(3);
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: $clr-content-link-active;
+        }
+      }
+    }
+  }
+}
+
+// Dashboard
+.dashboard {
+  .small-col {
+    .view-latest-active-trainings {
+      .views-field {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

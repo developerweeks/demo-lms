@@ -1,0 +1,106 @@
+.page-wrapper table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+}
+
+.page-wrapper .solo-table-wrapper {
+  border: var(--solo-px1) solid var(--r-br, var(--r-br-b));
+}
+
+.page-wrapper table tr th,
+.page-wrapper table tr td {
+  border-bottom: var(--solo-px1) solid var(--r-br, var(--r-br-b));
+}
+
+.page-wrapper table tr:last-child td {
+  border-bottom: none;
+}
+
+.page-wrapper table td ul {
+  margin: 0;
+}
+
+.page-wrapper table td li {
+  list-style: none;
+}
+
+.page-wrapper tr.region-title {
+  color: var(--r-tx);
+  background-color: var(--r-bg);
+}
+
+.page-wrapper .region-title td {
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+.page-wrapper .region-title td a {
+  text-transform: capitalize;
+}
+
+.page-wrapper table tr:nth-child(even) {
+  background-color: var(--solo-even, var(--r-bg));
+}
+
+.page-wrapper table tr:nth-child(odd) {
+  background-color: var(--solo-odd, var(--r-bg));
+}
+
+#page-wrapper table tfoot tr,
+#page-wrapper table thead tr {
+  background-color: var(--solo-thead, var(--r-bg));
+}
+
+.page-wrapper table td,
+.page-wrapper table th {
+  padding: var(--solo-px8);
+  display: table-cell;
+  vertical-align: middle;
+  text-align: var(--solo-text-align-start);
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.page-wrapper table th:first-child,
+.page-wrapper table td:first-child {
+  padding-inline-start: var(--solo-px16);
+}
+
+.page-wrapper table td .form-type-radio,
+.page-wrapper table td .form-type-checkbox {
+  margin: 0 !important;
+}
+
+.page-wrapper table th.hide-empty-column,
+.page-wrapper table td.hide-empty-column,
+.page-wrapper table th.priority-low,
+.page-wrapper table th.priority-medium,
+.page-wrapper table td.priority-low,
+.page-wrapper table td.priority-medium {
+  display: none;
+}
+
+@media (min-width:36rem) {
+  .page-wrapper table th.priority-medium,
+  .page-wrapper table td.priority-medium {
+    display: table-cell;
+  }
+
+}
+
+@media (min-width:62rem) {
+  .page-wrapper table th.priority-low,
+  .page-wrapper table td.priority-low {
+    display: table-cell;
+  }
+
+}
+
+.page-wrapper .tabledrag-toggle-weight-wrapper + table,
+.page-wrapper .tabledrag-toggle-weight-wrapper + .tableresponsive-toggle-columns + table {
+  margin-block-start: 0;
+}

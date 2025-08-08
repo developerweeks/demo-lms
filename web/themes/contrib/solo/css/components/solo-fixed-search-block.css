@@ -1,0 +1,84 @@
+#fixed-search-block {
+  display: block;
+  width: 100%;
+  z-index: 5000;
+  height: 0;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  overflow-y: hidden;
+  transition: height 400ms cubic-bezier(0.25, 1, 0.5, 1);
+  background-color: var(--r-bg);
+}
+
+#fixed-search-block .fixed-search-block-inner {
+  position: relative;
+  padding-block-start: 3.125rem;
+  padding-block-end: 3.125rem;
+  display: flex;
+  flex-wrap: nowrap;
+  row-gap: 0;
+  justify-content: start;
+  align-items: center;
+  min-height: 300px;
+  max-width: 1100px;
+}
+
+.fixed-search-block-inner .fixed-search-wrapper {
+  border-radius: var(--solo-px16);
+  display: flex;
+}
+
+.fixed-search-block-inner form .form-search,
+.fixed-search-block-inner form .form-submit {
+  padding-block-start: var(--solo-px20);
+  padding-block-end: var(--solo-px20);
+}
+
+.fixed-search-block-inner .solo-search-block-form .form-type-search::before {
+  inset-block-start: 26px;
+}
+
+.fixed-search-block-inner .search-button-close {
+  flex-basis: 60px;
+}
+
+.fixed-search-block-inner form .form-submit {
+  border-start-start-radius: 0;
+  border-start-end-radius: var(--solo-px4);
+  border-end-start-radius: 0;
+  border-end-end-radius: var(--solo-px4);
+}
+
+.fixed-search-block-inner .solo-search-block-form .form-item,
+.fixed-search-block-inner .solo-search-block-form .form-actions {
+  margin-block: 0 !important;
+  margin-inline: auto !important;
+}
+
+.fixed-search-block-inner .search-button-close button {
+  color: var(--r-tx);
+  border: 1px solid var(--r-br, var(--r-br-b));
+  background-color: var(--r-bg);
+  min-width: 60px !important;
+  margin-block: 0 !important;
+  margin-inline: auto !important;
+  border-start-start-radius: var(--solo-px4);
+  border-start-end-radius: 0;
+  border-end-start-radius: var(--solo-px4);
+  border-end-end-radius: 0;
+}
+
+.solo-inner.fixed-search-block-inner .hamburger-icon span>svg {
+  height: 4.5rem;
+  width: 4.688rem;
+}
+
+.fixed-search-block-inner .solo-search-block-form {
+  flex-basis: calc(100% - 65px);
+  flex-grow: 1;
+}
+
+.fixed-search-block-inner {
+  position: relative;
+}

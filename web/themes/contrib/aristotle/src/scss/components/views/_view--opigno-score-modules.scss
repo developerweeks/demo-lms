@@ -1,0 +1,73 @@
+.view-opigno-score-modules {
+  &.view-display-id-dashboard_notavaluated_modules {
+    font-size: rem($font-size-sm);
+
+    .item-list {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        text-align: center;
+        margin: 0 0 rem(20);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .views-field .field-content {
+          a {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            padding: rem(10);
+            margin-bottom: rem(20);
+            strong {
+              line-height: rem(18);
+              margin-bottom: rem(4);
+            }
+            .sub-label {
+              margin-bottom: 0;
+              line-height: rem(18);
+            }
+          }
+        }
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+.view-display-id-block_pending,
+.view-display-id-full_list_block {
+  .item-list {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .views-field .field-content {
+      a {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: rem(10);
+        color: $clr-navy;
+        margin-bottom: 20px;
+
+        strong {
+          line-height: rem(18);
+          margin-bottom: rem(4);
+          text-transform: uppercase;
+        }
+        .sub-label {
+          margin-bottom: 0;
+          line-height: rem(18);
+        }
+      }
+    }
+  }
+}

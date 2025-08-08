@@ -1,0 +1,64 @@
+.block-page-title-block {
+  display: grid;
+}
+
+h1.page-title-text {
+  display: grid;
+  padding-block: var(--solo-px32);
+  padding-inline: 0;
+}
+
+h1.page-title-text span {
+  display: inline-flex;
+}
+
+h1.page-title-text {
+  font-size: calc(2 * var(--solo-px32));
+  line-height: calc(2 * var(--solo-px38));
+}
+
+#page-wrapper.pt-center h1.page-title-text,
+#page-wrapper.pt-center h1.page-title-text span {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width:74.99875rem) {
+  h1.page-title-text {
+    font-size: calc(2 * var(--solo-px24));
+    line-height: calc(2 * var(--solo-px28));
+  }
+
+}
+
+@media (max-width:61.99875rem) {
+  h1.page-title-text {
+    font-size: var(--solo-px36);
+    line-height: calc(2 * var(--solo-px22));
+    padding-block: var(--solo-px16);
+    padding-inline: 0;
+  }
+
+}
+
+@media (max-width:47.99875rem) {
+  h1.page-title-text {
+    font-size: var(--solo-px24);
+    line-height: calc(2 * var(--solo-px14));
+    padding-block: var(--solo-px8);
+    padding-inline: 0;
+  }
+
+}
+
+@media (max-width:35.99875rem) {
+  h1.page-title-text {
+    font-size: var(--solo-px18);
+    line-height: var(--solo-px22);
+    padding-block: var(--solo-px8);
+    padding-inline: 0;
+  }
+
+}

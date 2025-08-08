@@ -1,0 +1,113 @@
+.solo-select-single,
+.solo-select-single * {
+  box-sizing: border-box !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.solo-select-single {
+  all: unset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+  width: auto;
+  border: none;
+  padding: 0;
+  background: var(--r-bg);
+}
+
+.solo-select-single-header {
+  justify-content: space-between;
+  padding: var(--solo-px8) var(--solo-px10);
+}
+
+.solo-select-single-content,
+.solo-select-single-header {
+  display: flex;
+  align-items: start;
+  width: auto;
+  border: var(--solo-px1) solid var(--r-br, var(--r-br-b));
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  background: var(--r-header-bg);
+  color: var(--r-header-tx);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: flex-start;
+  min-width: 300px;
+}
+
+.solo-select-single-header .select-single-header-arrow {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  transition: transform 0.3s ease-in-out;
+  line-height: 1;
+}
+
+.solo-select-single-header .select-single-header-arrow svg {
+  height: 28px;
+  width: 28px;
+  fill: var(--r-tx);
+  transition: transform 0.3s ease-in-out;
+}
+
+.solo-select-single-header  .select-single-header-arrow:hover svg {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.single-opened.solo-select-single .solo-select-single-header .select-single-header-arrow svg {
+  transform: rotate(180deg);
+}
+
+.solo-select-single-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: none;
+  z-index: 100;
+  font-size: 95%;
+}
+
+.solo-select-single-content,
+.solo-select-single-content * {
+  line-height: 1.6;
+}
+
+.solo-select-single-content .single-content-inner > * {
+  padding: var(--solo-px4) var(--solo-px10) !important;
+}
+
+.solo-select-single-content .solo-select-single-option {
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: inherit;
+  text-align: var(--solo-text-align-start);
+  font-size: 95%;
+}
+
+.solo-select-single .solo-select-single-header:hover,
+.solo-select-single .solo-select-single-option:hover {
+  background: var(--r-bg);
+}
+
+/* RTL Support */
+[dir="rtl"] .solo-select-single {
+  text-align: right;
+}
+
+[dir="rtl"] .solo-select-single-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .solo-select-single-header .select-single-header-arrow {
+  transform: rotate(180deg);
+}

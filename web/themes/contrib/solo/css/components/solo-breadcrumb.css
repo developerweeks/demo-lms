@@ -1,0 +1,59 @@
+.breadcrumb>.breadcrumb-inner {
+  padding-block-end: 0 !important;
+  padding-block-start: 0 !important;
+}
+
+.breadcrumb-nav {
+  display: grid;
+}
+
+ul.breadcrumb-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+ul.breadcrumb-menu li {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  border-block-end: none;
+  font-size: var(--solo-px14);
+}
+
+ul.breadcrumb-menu li > a {
+  display: flex;
+  align-items: center;
+  padding-block: var(--solo-px16);
+  padding-inline-end: var(--solo-px6);
+  padding-inline-start: var(--solo-px2);
+}
+
+ul.breadcrumb-menu li > span {
+  display: flex;
+  align-items: center;
+  padding-block: var(--solo-px16);
+  padding-inline-end: var(--solo-px6);
+  padding-inline-start: var(--solo-px4);
+}
+
+.breadcrumb-menu li .breadcrumb-sep {
+  display: flex;
+  align-items: center;
+  fill: var(--r-tx);
+}
+
+.solo__bc-scroll ul.breadcrumb-menu {
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.breadcrumb-menu > li:first-child > * {
+  padding-inline-start: 0;
+}

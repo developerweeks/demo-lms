@@ -1,0 +1,99 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display Opigno posts of community_post type.
+ *
+ * Available varaibles:
+ * - post: the full Opigno post entity;
+ * - id: the post ID;
+ * - author: the rendered author entity;
+ * - author_link: the url of the author entity;
+ * - author_name: the author displayed name;
+ * - author_picture: the author account image;
+ * - text: the post text;
+ * - created: the post creation timestamp;
+ * - add_comment_link: the link to trigger the "Create comment" form opening;
+ * - comments: the block with the comment form and all post comments;
+ * - is_pinned: if the post is pinned or not;
+ * - is_last_viewed: if the post is the last one that was viewed by the user;
+ * - like_link: the link to like/dislike the post;
+ * - like_count_link: the link to display the list of people who liked the post;
+ * - attachment: the post shared attachment (training/badge/certificate);
+ * - url: the post view page url;
+ * - is_page: whether the current page is a post view page or not;
+ * - community_name: the name of the related community;
+ * - community_url: a link to the community-related url;
+ * - is_community_page: whether the current page is a related community page.
+ */
+#}
+
+{% set classes = [
+    'content-box',
+    'comment-item__container',
+    is_pinned ? 'opigno-pinned-post',
+   ]
+%}
+
+<div id="opigno-post-{{ id }}">
+  {% if is_last_viewed and not is_page %}
+    <div class="new-comment-devider">
+      <span>{{ "you are up to date"|t( {}, {'context': 'Opigno social'} ) }}</span>
+    </div>
+  {% endif %}
+
+  <div {{ attributes.addClass(classes) }}>
+    <div class="comment-item__user">
+      {{ author }}
+      <div class="comment-item__user-info">
+        <div class="comment-item__name">
+          {% if is_community_page %}
+            <a href="{{ author_link }}">{{ author_name }}</a>
+          {% else %}
+            <a href="{{ community_url }}">{{ community_name }}</a>
+          {% endif %}
+        </div>
+        {% if is_page %}
+          <div class="name">
+            <a class="comment-item-name" href="{{ author_link }}">{{ author_name }}</a>
+            -
+            <time templates/opigno_post/opigno-post--community-post.html.twig>{{ created|format_date('post_date') }}</time>
+          </div>
+        {% elseif is_community_page %}
+          <a href="{{ url }}" class="comment-item__date">{{ created|format_date('post_date') }}</a>
+        {% else %}
+          <div class="name">
+            <a class="comment-item-name" href="{{ author_link }}">{{ author_name }}</a>
+            -
+            <a href="{{ url }}" class="comment-item__date">{{ created|format_date('post_date') }}</a>
+          </div>
+        {% endif %}
+      </div>
+
+      {{ post_actions }}
+      {% if is_pinned %}
+        <div class="pinned-post">
+          {{ 'pinned post'|t( {}, {'context': 'Opigno social'} ) }}
+          <i class="fi"></i>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="comment-item__body">
+      {{ text }}
+      {{ attachment }}
+      {{ content }}
+    </div>
+    <div class="comment-item__info">
+      {{ like_count_link }}
+      {{ comments }}
+    </div>
+
+    <div class="comment-item__actions">
+      {{ like_link }}
+      {{ add_comment_link }}
+    </div>
+
+    {# The wrapper for the post comments block. #}
+    <div id="opigno-comments-placeholder-{{ id }}" class="opigno-comments-placeholder"></div>
+  </div>
+</div>

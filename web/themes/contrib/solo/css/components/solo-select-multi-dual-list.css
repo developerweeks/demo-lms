@@ -1,0 +1,61 @@
+.solo-select-multi,
+.solo-select-multi * {
+  box-sizing: border-box !important;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.solo-select-multi {
+  all: unset;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-width: 120px;
+  width: auto;
+  border: none;
+  padding: 0;
+  background: var(--r-bg);
+}
+
+
+.solo-select-multi-dual-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: var(--solo-px1) solid var(--r-br, var(--r-br-b));
+  border-radius: var(--solo-px6);
+  background-color: var(--r-bg, #fff);
+}
+
+/* Two-Column Layout */
+.dual-list-container {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--solo-px12);
+}
+
+.dual-list-available,
+.dual-list-selected {
+  flex: 1;
+  border: var(--solo-px1) solid var(--r-br);
+  padding: var(--solo-px10);
+}
+
+/* Buttons */
+.dual-list-option button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: var(--solo-px6);
+}
+
+/* Responsive: Collapse to One Column on Small Screens */
+@media (max-width: 768px) {
+  .dual-list-container {
+    flex-direction: column;
+  }
+}
