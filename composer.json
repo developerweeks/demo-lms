@@ -86,7 +86,8 @@
         "drupal/neato": "^2.0",
         "drupal/solo": "^1.0",
         "drupal/admin_toolbar": "^3.6",
-        "drupal/project_browser": "^2.0@beta"
+        "drupal/project_browser": "^2.0@beta",
+        "drupal/masquerade": "^2.0"
     },
     "require-dev": {
         "mglaman/composer-drupal-lenient": "^1.0"
