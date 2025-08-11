@@ -37,6 +37,7 @@ function aristotle_form_system_theme_settings_alter(&$form, FormStateInterface $
 
   $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
   $logo_path = $theme_path . '/assets/';
+  $logo_path = file_url_transform_relative(file_create_url($logo_path));
 
   $form['logo']['logo_path_anonymous'] = [
     '#type' => 'textfield',
