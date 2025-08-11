@@ -91,7 +91,7 @@
 <article {{ attributes }}>
   {% if logo %}
     <div class="logo">
-      <img src="{{ logo }}" alt="{{ 'Opigno LMS logo'|t }}">
+      <img src="{{ logo[24:] }}" alt="{{ 'Opigno LMS logo'|t }}">
     </div>
   {% endif %}
 
@@ -105,7 +105,7 @@
     <div class="text-center">
       {% if bg_image %}
         <div class="page-bg">
-          <img src="{{ bg_image }}" alt="opigno-logo-bg">
+          <img src="{{ bg_image[24:] }}" alt="opigno-logo-bg">
         </div>
       {% endif %}
 
