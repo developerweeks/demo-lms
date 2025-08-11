@@ -88,7 +88,8 @@
         "drupal/admin_toolbar": "^3.6",
         "drupal/project_browser": "^2.0@beta",
         "drupal/masquerade": "^2.0",
-        "drupal/login_gov": "^1.1"
+        "drupal/login_gov": "^1.1",
+        "drupal/backup_migrate": "^5.1"
     },
     "require-dev": {
         "mglaman/composer-drupal-lenient": "^1.0"
