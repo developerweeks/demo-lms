@@ -48,9 +48,9 @@ function aristotle_form_system_theme_settings_alter(&$form, FormStateInterface $
       ],
     ],
     '#description' => t('Examples: <code>@implicit-public-file</code>,<code>@implicit-public-file</code> or <code>@implicit-file</code>.<br>If the "different homepage for anonymous users" option is enabled allows overriding the logo on the homepage.', [
-      '@implicit-public-file' => $logo_path . 'Logo-Opigno-3-dark.svg',
-      '@implicit-file' => 'Logo-Opigno-3-dark.svg',
-      '@implicit-schema-file' => 'public://Logo-Opigno-3-dark.svg',
+      '@implicit-public-file' => $logo_path . 'headstart-dark.png',
+      '@implicit-file' => 'headstart-dark.png',
+      '@implicit-schema-file' => 'public://headstart-dark.png',
     ]),
   ];
 
