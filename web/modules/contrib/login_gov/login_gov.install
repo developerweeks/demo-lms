@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains update functions for the login_gov module.
+ */
+
+use Drupal\key\Entity\Key;
+
+/**
+ * Implements hook_update_N().
+ *
+ * Convert old private keys to Key entities.
+ */
+function login_gov_update_9001(&$sandbox) {
+  $clients = \Drupal::entityTypeManager()->getStorage('openid_connect_client')->loadByProperties(['plugin' => 'login_gov']);
+  foreach ($clients as $id => $client) {
+    $settings = $client->get('settings');
+    // Skip entries without a private key.
+    if (empty($settings['private_key'])) {
+      continue;
+    }
+    // Choose a new unique key id.
+    $key_id = $id . '_private_key';
+    $index = 1;
+    while (Key::load($key_id)) {
+      $key_id = $id . '_private_key_' . $index++;
+    }
+    // Generate a new Private key object.
+    Key::create([
+      'id' => $key_id,
+      'label' => $client->label() . ' private key',
+      'description' => 'Automatically converted from Login.gov config.',
+      'key_type' => 'asymmetric_private',
+      'key_type_settings' => key_asymmetric_get_key_properties($settings['private_key']),
+      'key_provider_settings' => ['key_value' => $settings['private_key']],
+    ])->save();
+    // Update the client to use the new key.
+    $client->set('settings', [
+      'key_private_key' => $key_id,
+      'private_key' => NULL,
+    ]);
+    $client->save();
+  }
+}

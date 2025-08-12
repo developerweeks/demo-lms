@@ -1,0 +1,12 @@
+name: Video Transcode
+core_version_requirement: '>=10.2'
+description: 'Convert uploaded video files in to web compatible video formats.'
+type: module
+package: Media
+dependencies:
+  - video
+
+# Information added by Drupal.org packaging script on 2024-11-28
+version: '3.1.0'
+project: 'video'
+datestamp: 1732797425

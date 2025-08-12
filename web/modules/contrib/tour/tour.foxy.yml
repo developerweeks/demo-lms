@@ -1,0 +1,9 @@
+tour:
+  js:
+    js/tour.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/drupal
+    # @todo Remove this in https://www.drupal.org/project/drupal/issues/3204011
+    - core/internal.backbone

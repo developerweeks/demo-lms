@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: group.dashboard_item
+label: 'Dashboard item'
+targetEntityType: group
+cache: true

@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the last thread message.
+ *
+ * Available varaibles:
+ * - title;
+ * - text;
+ * - time;
+ * - url.
+ */
+#}
+
+<a class="btn" href="{{ url }}">
+  <div class="pm-title">{{ title }}</div>
+  <div class="pm-text">{{ text }}</div>
+  <div class="pm-time">{{ time }}</div>
+</a>

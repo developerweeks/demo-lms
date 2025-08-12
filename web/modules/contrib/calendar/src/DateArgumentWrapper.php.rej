@@ -1,0 +1,10 @@
+--- src/DateArgumentWrapper.php
++++ src/DateArgumentWrapper.php
+@@ -151,6 +151,7 @@ class DateArgumentWrapper {
+     $plugin_granularity = str_replace('date_', '', $plugin_granularity);
+     switch ($plugin_granularity) {
+       case 'year_month':
++      case 'range_year_month':
+         return 'month';
+ 
+       break;

@@ -1,0 +1,16 @@
+{
+  "name": "drupal/key_asymmetric",
+  "type": "drupal-module",
+  "description": "Provides key types for private and public keys / X.509 certificates.",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/key_asymmetric",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/key_asymmetric",
+    "source": "https://git.drupalcode.org/project/key_asymmetric"
+  },
+  "require": {
+    "drupal/key": "^1.14",
+    "phpseclib/phpseclib": "^3.0"
+  }
+}

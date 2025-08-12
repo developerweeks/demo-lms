@@ -1,0 +1,116 @@
+openid_connect.settings:
+  type: config_object
+  label: 'OpenID Connect settings'
+  mapping:
+    always_save_userinfo:
+      type: boolean
+      label: 'Save user claims on every login'
+    connect_existing_users:
+      type: boolean
+      label: 'Automatically connect existing users'
+    override_registration_settings:
+      type: boolean
+      label: 'Override registration settings'
+    end_session_enabled:
+      type: boolean
+      label: 'Logout from identity provider'
+    user_login_display:
+      type: string
+      label: 'Show external providers in user login form'
+    redirect_login:
+      type: string
+      label: 'Redirect on login'
+    redirect_logout:
+      type: string
+      label: 'Redirect on logout'
+    userinfo_mappings:
+      type: sequence
+      label: 'User claims mapping'
+      sequence:
+        type: string
+    role_mappings:
+      type: sequence
+      label: 'User role mapping'
+      sequence:
+        type: sequence
+        sequence:
+          type: string
+
+openid_connect.client.*:
+  type: config_entity
+  label: 'OpenID Connect entity definitions'
+  mapping:
+    id:
+      type: string
+      label: 'OpenID Connect client entity ID'
+    label:
+      type: string
+      label: 'OpenID Connect client name'
+    plugin:
+      type: string
+      label: 'OpenID Connect client plugin ID'
+    settings:
+      type: openid_connect.client.plugin.[%parent.plugin]
+
+openid_connect.client.plugin.*:
+  type: mapping
+  label: 'OpenID Connect plugin base settings'
+  mapping: &base
+    client_id:
+      type: string
+      label: 'Client ID'
+    client_secret:
+      type: string
+      label: 'Client secret'
+    iss_allowed_domains:
+      type: string
+      label: 'Domains that are allowed to initiate SSO using ISS'
+
+openid_connect.client.plugin.facebook:
+  type: mapping
+  label: 'OpenID Connect Facebook settings'
+  mapping:
+    <<: *base
+    api_version:
+      type: string
+      label: 'API Version'
+
+openid_connect.client.plugin.generic:
+  type: mapping
+  label: 'OpenID Connect Generic settings'
+  mapping:
+    <<: *base
+    issuer_url:
+      type: string
+      label: 'Issuer URL'
+    authorization_endpoint:
+      type: string
+      label: 'Authorization endpoint'
+    token_endpoint:
+      type: string
+      label: 'Token endpoint'
+    userinfo_endpoint:
+      type: string
+      label: 'Userinfo endpoint'
+    end_session_endpoint:
+      type: string
+      label: 'End Session endpoint'
+    scopes:
+      type: sequence
+      label: 'Scopes'
+      sequence:
+        type: string
+
+openid_connect.client.plugin.okta:
+  type: mapping
+  label: 'OpenID Connect Okta settings'
+  mapping:
+    <<: *base
+    okta_domain:
+      type: string
+      label: 'Okta domain'
+    scopes:
+      type: sequence
+      label: 'Scopes'
+      sequence:
+        type: string

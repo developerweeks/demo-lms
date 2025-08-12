@@ -1,0 +1,25 @@
+tour:
+  version: VERSION
+  js:
+    dist/tour.js: { weight: -1 }
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/drupal
+    - core/drupalSettings
+    # @todo Remove this in https://www.drupal.org/project/drupal/issues/3204011
+    - core/internal.backbone
+    - tour/tour-styling
+
+tour-styling:
+  version: VERSION
+  css:
+    component:
+      dist/tour.css: { media: screen }
+      css/tour.module.css: { media: screen }
+
+tour-block-styling:
+  version: VERSION
+  css:
+    component:
+      css/tour.block.css: { media: screen }

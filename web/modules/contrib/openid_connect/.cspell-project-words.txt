@@ -1,0 +1,8 @@
+authmap
+authname
+autodiscover
+externalauth
+r_emailaddress
+r_liteprofile
+showcore
+useremail

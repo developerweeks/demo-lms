@@ -1,0 +1,5 @@
+entity.opigno_post_type.collection:
+  title: 'Opigno post types'
+  description: 'Opigno post types listing'
+  route_name: entity.opigno_post_type.collection
+  parent: system.admin_structure

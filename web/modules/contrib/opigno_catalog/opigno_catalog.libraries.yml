@@ -1,0 +1,13 @@
+view_style:
+  version: VERSION
+  js:
+    js/opigno_catalog_style.js: {}
+  dependencies:
+    - core/jquery
+
+update_filters:
+  version: 1.0
+  js:
+    js/opigno_catalog_filters.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,36 @@
+openid_connect.client.plugin.login_gov:
+  type: mapping
+  label: 'OpenID Connect plugin settings for Login.gov'
+  mapping: &base
+    client_id:
+      type: string
+      label: 'Client ID'
+    sandbox_mode:
+      type: boolean
+      label: 'Sandbox mode'
+    acr_level:
+      type: sequence
+      label: 'ACR Levels'
+      sequence:
+        type: string
+    require_piv:
+      type: boolean
+      label: 'Require PIV login'
+    verified_within.count:
+      type: integer
+      label: 'Verified within count'
+    verified_within.units:
+      type: string
+      label: 'Verified within units'
+    userinfo_fields:
+      type: sequence
+      label: 'User fields to fetch'
+      sequence:
+        type: string
+    force_reauth:
+      type: boolean
+      label: 'Force reauthorization'
+    key_private_key:
+      type: string
+      label: 'Key ID from Key Module'
+

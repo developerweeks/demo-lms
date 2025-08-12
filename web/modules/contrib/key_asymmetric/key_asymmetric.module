@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for key_asymmetric.
+ */
+
+/**
+ * Compatibility wrapper for previous versions of key_asymmetric.
+ *
+ * @param string $key_value
+ *   The key (as a string, not an entity) in a format that is recognized by
+ *   the phpseclib library.
+ * @param string $password
+ *   (Optional) password for a password-protected private key.
+ *
+ * @return array
+ *   Array with the key properties.
+ *
+ * @deprecated in key_asymmetric:1.2.0 and is removed from key_asymmetric:2.0.0.
+ *   Use \Drupal\key_asymmetric\KeyPair::getKeyProperties() instead.
+ * @see https://www.drupal.org/project/key_asymmetric/issues/3269077
+ * @see \Drupal\key_asymmetric\KeyPair::getKeyProperties()
+ */
+function key_asymmetric_get_key_properties($key_value, $password = FALSE) {
+  return \Drupal::service('key_asymmetric.key_pair')->getKeyProperties($key_value, $password);
+}

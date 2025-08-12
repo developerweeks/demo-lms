@@ -1,0 +1,141 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the alt_aero_log_contacts module.
+ */
+
+use Drupal\Core\Entity\EntityStorageException;
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_schema().
+ */
+function opigno_dashboard_schema() {
+  $schema['opigno_dashboard_positioning'] = [
+    'fields' => [
+      'pid' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'columns' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'positions' => [
+        'type' => 'text',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['pid'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function opigno_dashboard_install() {
+  $blocks = \Drupal::config('opigno_dashboard.settings')->get('blocks');
+
+  // Create block instances.
+  \Drupal::service('opigno_dashboard.block')->createBlocksInstances($blocks);
+
+  // Grant 'opigno dashboard layout access' permission.
+  $roles = Role::loadMultiple();
+  foreach ($roles as $role) {
+    $role->grantPermission('opigno dashboard layout access');
+    try {
+      $role->save();
+    }
+    catch (EntityStorageException $e) {
+      watchdog_exception('opigno_dashboard_exception', $e);
+    }
+  }
+}
+
+/**
+ * Update the list of blocks that are available for selection on the dashboard.
+ */
+function opigno_dashboard_update_9001() {
+  $config_factory = \Drupal::configFactory();
+  // Disable "Recent comments" and "Unread notifications" blocks on dashboard.
+  $config = $config_factory->getEditable('opigno_dashboard.settings');
+  $blocks = $config->get('blocks');
+  $disable = [
+    'views_block:comments_recent-block_1',
+    'views_block:opigno_notifications-block_unread_dashboard',
+  ];
+  foreach ($disable as $block) {
+    if (isset($blocks[$block])) {
+      $blocks[$block]['available'] = 0;
+    }
+  }
+
+  $config->set('blocks', $blocks)->save();
+
+  // Update the default config.
+  $config_factory->getEditable('opigno_dashboard.default.settings')
+    ->set('positions', '{"1":[{"admin_label":"User statistics","context_definitions":[],"id":"opigno_user_stats_block"},{"admin_label":"User connections","context_definitions":[],"id":"opigno_user_connections_block"},{"admin_label":"Training in progress","id":"views_block:latest_active_trainings-block","mandatory":false},{"admin_label":"Who is new","context_definitions":[],"id":"views_block:who_s_new-block_1"}],"2":[{"admin_label":"Recent posts","context_definitions":[],"id":"opigno_social_wall_block"}],"3":[{"admin_label":"Opigno calendar block","id":"views_block:opigno_calendar-month_block","mandatory":false},{"admin_label":"Who is online","context_definitions":[],"id":"views_block:who_s_online-who_s_online_block"}]}')
+    ->save();
+
+  // Rename dashboard blocks.
+  $config_factory->getEditable('block.block.dashboard_views_block_latest_active_trainings_block')
+    ->set('settings.label', 'Training in progress')
+    ->save();
+
+  $config_factory->getEditable('block.block.dashboard_views_block_private_message_block_dashboard')
+    ->set('settings.label', 'Recent messages')
+    ->save();
+
+  // Import updated configs.
+  $configs = [
+    'opigno_learning_path' => [
+      'config/install' => [
+        'core.entity_view_mode.group.dashboard_item',
+        'core.entity_view_display.group.learning_path.dashboard_item',
+        'views.view.latest_active_trainings',
+        'views.view.opigno_group_members',
+      ],
+    ],
+    'opigno_statistics' => [
+      'config/optional' => [
+        'views.view.who_s_online',
+        'views.view.who_s_new',
+      ],
+    ],
+    'opigno_module' => [
+      'config/optional' => [
+        'views.view.opigno_score_modules',
+      ],
+    ],
+    'opigno_messaging' => [
+      'config/optional' => [
+        'core.entity_view_display.private_message_thread.private_message_thread.inbox',
+        'views.view.private_message',
+      ],
+    ],
+  ];
+
+  \Drupal::moduleHandler()->loadInclude('opigno_module', 'install');
+  foreach ($configs as $module => $data) {
+    foreach ($data as $path => $yml) {
+      _opigno_module_apply_update($module, $path, $yml);
+    }
+  }
+}
+
+/**
+ * Update dashboard blocks.
+ */
+function opigno_dashboard_update_9002() {
+  \Drupal::moduleHandler()->loadInclude('opigno_module', 'install');
+  _opigno_module_apply_update('opigno_learning_path', 'config/install', ['views.view.latest_active_trainings']);
+  _opigno_module_apply_update('opigno_statistics', 'config/optional', ['views.view.who_s_new']);
+}

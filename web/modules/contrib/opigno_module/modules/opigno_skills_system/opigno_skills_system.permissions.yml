@@ -1,0 +1,11 @@
+create terms in skills:
+  title: 'create terms in skills'
+
+delete terms in skills:
+  title: 'delete terms in skills'
+
+edit terms in skills:
+  title: 'edit terms in skills'
+
+access media_entity_browser_badge_images entity browser pages:
+  title: 'Access media_entity_browser_badge_images entity browser pages'

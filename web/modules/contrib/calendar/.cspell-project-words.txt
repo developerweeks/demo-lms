@@ -1,0 +1,31 @@
+# Project words
+CCYYW
+YYYYW
+colorpicker
+colpos
+curday
+datebox
+dayview
+iehint
+monthview
+multiday
+multirow
+noentry
+noscroll
+overlapcss
+overlapjs
+rrule
+singleday
+todate
+wday
+weekno
+weekview
+ydate
+
+# Drupal words
+grippie
+RTBC
+
+# Package names
+~colorbox
+~farbtastic

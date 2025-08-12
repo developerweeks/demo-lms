@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display post/comment action links.
+ *
+ * Available variables:
+ * - actions: the list of post/comment action links.
+ */
+#}
+
+{% if actions %}
+  <div class="dropdown">
+    <button class="comment-item__edit-btn dropdown-toggle" data-toggle="dropdown">
+      <i class="fi fi-rr-menu-dots"></i>
+    </button>
+
+    <ul class="comment-item__edit-menu dropdown-menu dropdown-menu-right">
+      {% for action in actions %}
+        {% if action %}
+          <li class="dropdown-item">{{ action }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

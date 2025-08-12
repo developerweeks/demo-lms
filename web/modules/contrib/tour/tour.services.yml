@@ -1,0 +1,10 @@
+services:
+  plugin.manager.tour.tip:
+    class: Drupal\tour\TipPluginManager
+    parent: default_plugin_manager
+  tour.lazy_builders:
+    class: Drupal\tour\LazyBuilders
+    arguments: [ '@plugin.manager.element_info', '@config.factory', '@tour.helper' ]
+  tour.helper:
+    class: Drupal\tour\TourHelper
+    arguments: ['@current_route_match', '@path.matcher', '@entity_type.manager', '@config.factory']

@@ -1,0 +1,6 @@
+tft:
+  version: 1.x
+  css:
+    theme:
+      css/tft.css: {}
+      css/tft.lightbox.css: {}

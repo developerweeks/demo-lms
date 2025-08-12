@@ -1,0 +1,3 @@
+services:
+  key_asymmetric.key_pair:
+    class: Drupal\key_asymmetric\KeyPair

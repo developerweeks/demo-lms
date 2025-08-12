@@ -1,0 +1,10 @@
+name: Opigno Notification
+type: module
+description: Opigno notification.
+core_version_requirement: ^9 || ^10
+package: Opigno
+
+# Information added by Drupal.org packaging script on 2024-09-30
+version: '3.2.7'
+project: 'opigno_notification'
+datestamp: 1727717905

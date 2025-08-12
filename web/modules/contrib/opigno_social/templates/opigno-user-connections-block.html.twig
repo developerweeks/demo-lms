@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the User connections block.
+ *
+ * Available variables:
+ * - connections: the rendered connections block content.
+ * - connectins_link: rendered link to the connections page;
+ * - with_wrapper: should the block wrapper be added or not.
+ */
+#}
+
+{% if with_wrapper %}
+  <div id="opigno-connections-communities-block" class="opigno-connections-communities-block content-box">
+{% endif %}
+
+  <h2 class="content-box__title">{{ 'Connections'|t }}</h2>
+  {% if connections == 0 %}
+    <div class="view-empty">
+      {{ 'You have no connection yet'|t }}
+      {{ connections_link }}
+    </div>
+  {% else %}
+    <p class="connections-number">
+      {% trans %}
+        You have <strong>1</strong> connection
+      {% plural connections %}
+        You have <strong>{{ connections }}</strong> connections
+      {% endtrans %}
+    </p>
+    {{ connections_link }}
+  {% endif %}
+
+{% if with_wrapper %}
+  </div>
+{% endif %}

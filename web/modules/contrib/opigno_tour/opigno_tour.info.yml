@@ -1,0 +1,12 @@
+name: Opigno Tour
+type: module
+description: Opigno Tour functionality.
+core_version_requirement: ^9 || ^10
+package: Opigno
+dependencies:
+  - drupal:tour
+
+# Information added by Drupal.org packaging script on 2024-09-30
+version: '3.2.7'
+project: 'opigno_tour'
+datestamp: 1727718043

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Opigno notification app install/update functionality.
+ */
+
+/**
+ * Implements hook_update_last_removed().
+ */
+function opigno_notification_update_last_removed() {
+  return 9001;
+}

@@ -1,0 +1,7 @@
+name: Media entity video
+description: 'Media entity for video files.'
+type: module
+package: Media
+core_version_requirement: ^9 || ^10
+dependencies:
+  - media_entity

@@ -1,0 +1,63 @@
+view global statistics:
+  title: 'View global statistics'
+  description: 'Allows the user to view the global statistics'
+
+view any group statistics:
+  title: 'View any group statistics'
+  description: 'Allows the user to view any group statistics'
+
+view any user statistics:
+  title: 'View any user statistics'
+  description: 'Allows the user to view any user statistics'
+
+view any private profile:
+  title: 'View any private profile'
+  restrict access: true
+
+access media_entity_browser_groups entity browser pages:
+  title: 'Access media_entity_browser_groups entity browser pages'
+
+access users overview:
+  title: 'Access users overview'
+
+administer ilt entities:
+  title: 'Administer ilt entities'
+
+administer meeting entities:
+  title: 'Administer meeting entities'
+
+assign collaborative_features role:
+  title: 'Assign collaborative_features role'
+
+cancel users by role:
+  title: 'Cancel users by role'
+
+create opigno_class group:
+  title: 'Create opigno_class group'
+
+create users:
+  title: 'Create users'
+
+edit users by role:
+  title: 'Edit users by role'
+
+manage group members in any group:
+  title: 'Manage group members in any group'
+
+message all groups:
+  title: 'Message all groups'
+
+message anyone regardless of groups:
+  title: 'Message anyone regardless of groups'
+
+opigno dashboard layout access:
+  title: 'Opigno dashboard layout access'
+
+role-assign users by role:
+  title: 'Role-assign users by role'
+
+score ilt entities:
+  title: 'Score ilt entities'
+
+view users by role:
+  title: 'View users by role'

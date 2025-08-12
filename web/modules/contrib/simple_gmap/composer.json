@@ -1,0 +1,6 @@
+{
+    "name": "drupal/simple_gmap",
+    "description": "Provides a Google Maps link/map formatter for simple Text fields.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later"
+}

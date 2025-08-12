@@ -1,0 +1,5 @@
+entity.openid_connect_client.list:
+  title: 'OpenID Connect'
+  description: 'Configure OpenID Connect clients.'
+  route_name: entity.openid_connect_client.list
+  parent: 'user.admin_index'

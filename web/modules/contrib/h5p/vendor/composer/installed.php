@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'drupal/h5p',
+        'pretty_version' => '2.0.x-dev',
+        'version' => '2.0.9999999.9999999-dev',
+        'reference' => 'ac7ed0c9cb0f4ac8cb425600d4c66d28df6ee553',
+        'type' => 'drupal-module',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'drupal/h5p' => array(
+            'pretty_version' => '2.0.x-dev',
+            'version' => '2.0.9999999.9999999-dev',
+            'reference' => 'ac7ed0c9cb0f4ac8cb425600d4c66d28df6ee553',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'h5p/h5p-core' => array(
+            'pretty_version' => '1.27.0',
+            'version' => '1.27.0.0',
+            'reference' => '829524eaf81fe3f3a295d0e843812be4735f51fc',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../h5p/h5p-core',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'h5p/h5p-editor' => array(
+            'pretty_version' => '1.25',
+            'version' => '1.25.0.0',
+            'reference' => '53dc7bdc57b17f5a0d55a8871a36d1b1bd631e70',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../h5p/h5p-editor',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

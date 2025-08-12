@@ -1,0 +1,11 @@
+{
+  "js/tour.js": {
+    "file": "tour.js",
+    "name": "tour",
+    "src": "js/tour.js",
+    "isEntry": true,
+    "css": [
+      "tour.css"
+    ]
+  }
+}

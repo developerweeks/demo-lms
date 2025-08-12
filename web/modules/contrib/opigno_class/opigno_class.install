@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Opigno Class module.
+ */
+
+/**
+ * Enable Userprotect and Role Delegation modules.
+ */
+function opigno_class_install() {
+  \Drupal::service('module_installer')->install([
+    'userprotect',
+    'role_delegation',
+  ]);
+}
+
+/**
+ * Implements hook_update_last_removed().
+ */
+function opigno_class_update_last_removed() {
+  return 9001;
+}

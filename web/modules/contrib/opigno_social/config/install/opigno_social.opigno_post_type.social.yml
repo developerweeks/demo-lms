@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+label: Social
+id: social
+description: 'Posts will be visible for user''s connections.'

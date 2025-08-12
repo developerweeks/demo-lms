@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the "Create comment" form block.
+ *
+ * Available variables:
+ * - form: the form to create a new comment.
+ */
+#}
+
+<div class="comment-item__form">
+  {% if form %}
+    <div class="form--content">
+      {{ form }}
+    </div>
+  {% endif %}
+</div>
+<div class="comment-item__comment--list"></div>

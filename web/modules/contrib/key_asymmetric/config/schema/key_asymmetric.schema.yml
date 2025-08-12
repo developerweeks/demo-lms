@@ -1,0 +1,64 @@
+key.type.asymmetric_private:
+  type: mapping
+  label: 'Private key'
+  mapping:
+    has_public:
+      type: boolean
+      label: 'Has public key'
+    format:
+      type: string
+      label: 'Certificate format (e.g., PKCS8)'
+    algo:
+      type: string
+      label: 'Algorithm'
+    key_size:
+      type: integer
+      label: 'Key size'
+    hash_algo:
+      type: string
+      label: 'Hash algorithm'
+    hash_size:
+      type: integer
+      label: 'Hash size'
+
+key.type.asymmetric_public:
+  type: mapping
+  label: 'X509 Certificate'
+  mapping:
+    format:
+      type: string
+      label: 'Certificate format (e.g., PKCS8)'
+    algo:
+      type: string
+      label: 'Algorithm'
+    key_size:
+      type: integer
+      label: 'Key size'
+    hash_algo:
+      type: string
+      label: 'Hash algorithm'
+    hash_size:
+      type: integer
+      label: 'Hash size'
+    fingerprint:
+      type: string
+      label: 'Key fingerprint'
+    cert:
+      type: mapping
+      label: 'Algorithm'
+      mapping:
+        subject:
+          type: string
+          label: "Certificate subject DN"
+        issuer:
+          type: string
+          label: "Certificate issuer DN"
+        not_before:
+          type: string
+          label: "Not before"
+        not_after:
+          type: string
+          label: "Not after"
+    private_key:
+      type: string
+      label: 'Private key'

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for the module.
+ */
+
+/**
+ * Implements hook_update_last_removed().
+ */
+function opigno_catalog_update_last_removed() {
+  return 9001;
+}

@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the socail feed page.
+ *
+ * Available variables:
+ * - left_column;
+ * - center_column;
+ * - right_column.
+ */
+#}
+
+<div class="dashboard-column-wrapper row three-col-layout">
+  <div class="dashboard-column col-left col-xl-3 col-md-6">
+    {% for left_block in left_column %}
+      {{ left_block }}
+    {% endfor %}
+  </div>
+  <div class="dashboard-column col-center col-xl-5 col-md-12">
+    {% for center_block in center_column %}
+      {{ center_block }}
+    {% endfor %}
+  </div>
+  <div class="dashboard-column col-right col-xl-4 col-md-6">
+    {% for right_block in right_column %}
+      {{ right_block }}
+    {% endfor %}
+  </div>
+</div>

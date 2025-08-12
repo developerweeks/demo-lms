@@ -1,0 +1,231 @@
+restful post color_rest_resource:
+  title: 'Post color resources'
+
+access checkout:
+  title: 'Access checkout'
+
+create forum content:
+  title: 'Create forum content'
+
+delete own forum content:
+  title: 'Delete own forum content'
+
+edit own forum content:
+  title: 'Edit own forum content'
+
+manage own commerce_payment_method:
+  title: 'Manage own commerce_payment_method'
+
+restful get achievements_resource:
+  title: 'Restful get achievements_resource'
+
+restful get opigno_calendar_events_resource:
+  title: 'Restful get opigno_calendar_events_resource'
+
+restful get opigno_notification_resource:
+  title: 'Restful get opigno_notification_resource'
+
+restful get private_message_last_for_threads_resource:
+  title: 'Restful get private_message_last_for_threads_resource'
+
+restful get private_message_resource:
+  title: 'Restful get private_message_resource'
+
+restful get private_message_threads_resource:
+  title: 'Restful get private_message_threads_resource'
+
+restful get private_messages_resource:
+  title: 'Restful get private_messages_resource'
+
+restful get trainings_catalogue_resource:
+  title: 'Restful get trainings_catalogue_resource'
+
+restful patch opigno_notification_resource:
+  title: 'Restful patch opigno_notification_resource'
+
+restful patch private_message_thread_update_resource:
+  title: 'Restful patch private_message_thread_update_resource'
+
+restful post token_rest_resource:
+  title: 'Restful post token_rest_resource'
+
+search content:
+  title: 'Search content'
+
+take modules:
+  title: 'Take modules'
+
+use text format basic_html:
+  title: 'Use text format basic_html'
+
+use private messaging system:
+  title: 'Use private messaging system'
+
+use text format post_html:
+  title: 'Use text format post_html'
+
+view commerce_product:
+  title: 'View commerce_product'
+
+view ilt entities:
+  title: 'View ilt entities'
+
+view own commerce_order:
+  title: 'View own commerce_order'
+
+view own module results:
+  title: 'View own module results'
+
+view published module entities:
+  title: 'View published module entities'
+
+access certificate overview:
+  title: 'Access the Certificate overview page'
+
+view global statistics:
+  title: 'View global statistics'
+  description: 'Allows the user to view the global statistics'
+
+view any group statistics:
+  title: 'View any group statistics'
+  description: 'Allows the user to view any group statistics'
+
+view any user statistics:
+  title: 'View any user statistics'
+  description: 'Allows the user to view any user statistics'
+
+view any private profile:
+  title: 'View any private profile'
+  restrict access: true
+
+use text format restricted_html:
+  title: 'Use text format restricted_html'
+
+access media_entity_browser_file_pdf entity browser pages:
+  title: 'Access media_entity_browser_file_pdf entity browser pages'
+
+access media_entity_browser_groups entity browser pages:
+  title: 'Access media_entity_browser_groups entity browser pages'
+
+add certificate entities:
+  title: 'Add certificate entities'
+
+administer certificates:
+  title: 'Administer certificates'
+
+administer tft:
+  title: 'Administer tft'
+
+create learning_path group:
+  title: 'Create learning_path group'
+
+create opigno_course group:
+  title: 'Create opigno_course group'
+
+create pdf_file media:
+  title: 'Create pdf_file media'
+
+create terms in duration:
+  title: 'Create terms in duration'
+
+create terms in learning_path_category:
+  title: 'Create terms in learning_path_category'
+
+create terms in tags:
+  title: 'Create terms in tags'
+
+create terms in tft_tree:
+  title: 'Create terms in tft_tree'
+
+create tft_file media:
+  title: 'Create tft_file media'
+
+delete any pdf_file media:
+  title: 'Delete any pdf_file media'
+
+delete any tft_file media:
+  title: 'Delete any tft_file media'
+
+delete certificate entities:
+  title: 'Delete certificate entities'
+
+delete own pdf_file media:
+  title: 'Delete own pdf_file media'
+
+delete own tft_file media:
+  title: 'Delete own tft_file media'
+
+delete terms in duration:
+  title: 'Delete terms in duration'
+
+delete terms in learning_path_category:
+  title: 'Delete terms in learning_path_category'
+
+delete terms in tags:
+  title: 'Delete terms in tags'
+
+delete terms in tft_tree:
+  title: 'Delete terms in tft_tree'
+
+edit any pdf_file media:
+  title: 'Edit any pdf_file media'
+
+edit any tft_file media:
+  title: 'Edit any tft_file media'
+
+edit certificate entities:
+  title: 'Edit certificate entities'
+
+edit own pdf_file media:
+  title: 'Edit own pdf_file media'
+
+edit own tft_file media:
+  title: 'Edit own tft_file media'
+
+edit terms in duration:
+  title: 'Edit terms in duration'
+
+edit terms in learning_path_category:
+  title: 'Edit terms in learning_path_category'
+
+edit terms in tags:
+  title: 'Edit terms in tags'
+
+edit terms in tft_tree:
+  title: 'Edit terms in tft_tree'
+
+manage group content in any group:
+  title: 'Manage group content in any group'
+
+message all groups:
+  title: 'Message all groups'
+
+message anyone regardless of groups:
+  title: 'Message anyone regardless of groups'
+
+tft access file tree:
+  title: 'Tft access file tree'
+
+tft add a file to any term:
+  title: 'Tft add a file to any term'
+
+tft add child terms:
+  title: 'Tft add child terms'
+
+tft archive child terms:
+  title: 'Tft archive child terms'
+
+tft delete child terms:
+  title: 'Tft delete child terms'
+
+tft reorder terms:
+  title: 'Tft reorder terms'
+
+use text format opigno_certificate_wysiwyg:
+  title: 'Use text format opigno_certificate_wysiwyg'
+
+view published certificate entities:
+  title: 'View published certificate entities'
+
+view unpublished certificate entities:
+  title: 'View unpublished certificate entities'

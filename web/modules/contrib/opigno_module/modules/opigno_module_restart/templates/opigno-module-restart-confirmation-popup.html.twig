@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the restart confirmation popup.
+ *
+ * Available varaibles:
+ * - restart_button: the link to restart module.
+ */
+#}
+
+<div class="modal modal-ajax fade module-restart-confirmation" tabindex="-1" role="dialog" aria-label="{{ 'Restart the Module'|t }}">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{ 'Restart the Module'|t }}</h2>
+      </div>
+      <div class="modal-body">{{
+        "You're going to restart this module, your previous score will be lost - do you really want to continue?"|raw|t }}</div>
+      <div class="modal-actions">
+        <a href="{{ path('opigno_learning_path.close_modal') }}" data-dismiss="modal" class="use-ajax btn btn-rounded btn-cancel">{{ 'Cancel'|t }}</a>
+        {{ restart_button }}
+      </div>
+    </div>
+  </div>
+</div>

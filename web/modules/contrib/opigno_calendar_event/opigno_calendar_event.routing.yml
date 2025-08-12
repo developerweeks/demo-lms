@@ -1,0 +1,19 @@
+opigno_calendar_event.add_event:
+  path: '/ajax/calendar/event/add/opigno_calendar_event'
+  defaults:
+    _controller: '\Drupal\opigno_calendar_event\Controller\CalendarEventController::eventModal'
+    _title: 'Add Event'
+  requirements:
+    _entity_create_access: opigno_calendar_event
+
+opigno_calendar_event.edit_event:
+  path: '/ajax/calendar/event/{opigno_calendar_event}/edit'
+  defaults:
+    _controller: '\Drupal\opigno_calendar_event\Controller\CalendarEventController::eventModal'
+    _title: 'Add Event'
+  requirements:
+    _entity_create_access: opigno_calendar_event
+  options:
+    parameters:
+      opigno_calendar_event:
+        type: entity:opigno_calendar_event

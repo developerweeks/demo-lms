@@ -1,0 +1,13 @@
+name: Login.gov OpenID Connect
+type: module
+description: An OpenID Connect plugin for Login.gov.
+core_version_requirement: ^8.8 || ^9 || ^10
+package: 'User authentication'
+dependencies:
+  - openid_connect:openid_connect (>=3.0)
+  - key_asymmetric:key_asymmetric
+
+# Information added by Drupal.org packaging script on 2024-01-11
+version: '1.1.0'
+project: 'login_gov'
+datestamp: 1705004696

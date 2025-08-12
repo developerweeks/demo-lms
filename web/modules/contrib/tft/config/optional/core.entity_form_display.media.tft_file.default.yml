@@ -1,0 +1,88 @@
+uuid: f49c22ad-6cb5-4145-ae7f-36840bfc1ec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.documents_file
+    - field.field.media.tft_file.opigno_moxtra_recording_link
+    - field.field.media.tft_file.tft_file
+    - field.field.media.tft_file.tft_folder
+    - field.field.media.tft_file.tft_members
+    - media.type.tft_file
+  module:
+    - entity_browser
+    - path
+_core:
+  default_config_hash: XSgTbhNV9Ui0FCYQaltfBdK5HSSPQeP9m-IXk169UXQ
+id: media.tft_file.default
+targetEntityType: media
+bundle: tft_file
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  tft_file:
+    type: entity_browser_file
+    weight: 1
+    region: content
+    settings:
+      entity_browser: documents_file
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: true
+      selection_mode: selection_prepend
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  tft_folder:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  opigno_moxtra_recording_link: true
+  tft_members: true

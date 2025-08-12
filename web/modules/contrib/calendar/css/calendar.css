@@ -1,0 +1,456 @@
+/**
+ * Calendar calendar table styles.
+ */
+.calendar-calendar tr.odd,
+.calendar-calendar tr.even {
+  background-color: #fff;
+}
+.calendar-calendar table {
+  clear: both;
+  width: 100%; /* Setting at 100% causes problem in Internet Explorer. */
+  margin: 0 auto;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.calendar-calendar .month-view table {
+  clear: both;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+ * IE needs a little help to get the side by side tables to the right size.
+ */
+.calendar-calendar .year-view td {
+  width: 32%;
+  padding: 1px;
+  border: none;
+}
+
+.calendar-calendar .year-view td table td {
+  width: 13%;
+  padding: 0;
+}
+
+.calendar-calendar tr {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.calendar-calendar th {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  background-color: #ccc;
+}
+.calendar-calendar th a {
+  color: #fff;
+  background-color: #ccc;
+  font-weight: bold;
+}
+.calendar-calendar td {
+  width: 12%; /* 14% is about 1/7 of total table width */
+  min-width: 12%;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  vertical-align: top;
+  color: #777;
+  border: 1px solid #ccc;
+}
+
+/**
+ * Simplify the mini calendar by removing borders.
+ */
+.calendar-calendar .mini {
+  border: none;
+}
+
+/**
+ * Format for the week number in the first cell.
+ */
+.calendar-calendar td.week {
+  width: 1%;
+  min-width: 1%;
+}
+.calendar-calendar .week {
+  clear: both;
+  color: #555;
+  font-size: 0.8em;
+  font-style: normal;
+}
+.calendar-calendar .week a {
+  font-weight: normal;
+}
+
+/**
+ * IE6 does not support min-height, using Min-Height fast hack from
+ * http://www.dustindiaz.com/min-height-fast-hack .
+ */
+.calendar-calendar .inner {
+  height: auto;
+  min-height: 5em;
+  margin: 0;
+  padding: 0;
+}
+.calendar-calendar .inner div {
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Make sure paragraphs buried in calendar cells use padding, not margins, for
+ * separation so the background color doesn't come through.
+ */
+.calendar-calendar .inner p {
+  margin: 0;
+  padding: 0 0 0.8em 0;
+}
+.calendar-calendar td a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.calendar-calendar td a:hover {
+  text-decoration: underline;
+}
+.calendar-calendar td.year,
+.calendar-calendar td.month {
+  text-align: center;
+}
+
+/**
+ * Format days of the week header cells.
+ */
+.calendar-calendar th.days {
+  margin: 0;
+  padding: 1px;
+  text-align: center;
+  color: #ccc;
+  background-color: #224;
+}
+
+/**
+ * Floating day number div.
+ */
+.calendar-calendar div.day {
+  float: right;
+  clear: both;
+  width: 1.5em;
+  margin: 0;
+  padding: 0.125em 0.25em 0 0.25em;
+  text-align: center;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: gray;
+  background-color: #f3f3f3;
+}
+
+/**
+ * Individual node container.
+ */
+.calendar-calendar div.calendar {
+  float: right; /* needed to keep IE from hiding the floating day number */
+  clear: both;
+  width: 96%;
+  margin: 0 0.25em 0.25em 0;
+  text-align: left;
+  border: solid 1px #ddd;
+  background-color: #fff;
+}
+
+/**
+ * No floating of day view content because there is no floating day number.
+ */
+.calendar-calendar .day-view div.calendar {
+  float: none;
+  width: 98%;
+  margin: 1% 1% 0 1%;
+}
+
+.calendar-calendar div.title {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.calendar-calendar div.title a {
+  color: #000;
+}
+.calendar-calendar div.title a:hover {
+  color: #c00;
+}
+.calendar-calendar .content {
+  clear: both;
+  padding: 3px 3px 3px 5px;
+}
+.calendar div.form-item {
+  white-space: normal;
+}
+
+table td.mini,
+table th.mini,
+table.mini td.week {
+  margin: 0;
+  padding: 0 1px 0 0;
+}
+table td.mini a {
+  font-weight: normal;
+}
+.calendar-calendar .mini-day-off {
+  padding: 0;
+}
+.calendar-calendar .mini-day-on {
+  padding: 0;
+}
+table .mini-day-on a {
+  text-decoration: underline;
+}
+.calendar-calendar .mini .title {
+  font-size: 0.8em;
+}
+.mini .calendar-calendar .week {
+  font-size: 0.7em;
+}
+.mini-row {
+  width: 100%;
+  border: none;
+}
+.mini {
+  width: 32%;
+  vertical-align: top;
+}
+
+/**
+ * Formatting for the legend stripe and block.
+ */
+.calendar-calendar .stripe {
+  width: auto;
+  height: 5px;
+  font-size: 1px !important;
+  line-height: 1px !important;
+}
+.calendar-calendar .day-view .stripe {
+  width: 100%;
+}
+table.calendar-legend {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
+table.calendar-legend tr.odd .stripe,
+table.calendar-legend tr.even .stripe {
+  height: 12px !important;
+  font-size: 9px !important;
+  line-height: 10px !important;
+}
+.calendar-legend td {
+  text-align: left;
+}
+
+.calendar-empty {
+  font-size: 1px;
+  line-height: 1px;
+}
+
+/**
+ * Formatting for the full day view.
+ */
+.calendar-calendar td.calendar-agenda-hour {
+  width: 1%;
+  padding-top: 0.25em;
+  text-align: right;
+  border: none;
+  border-top: 1px #333 dotted;
+  font-family: serif;
+}
+.calendar-calendar td.calendar-agenda-no-hours {
+  min-width: 1%;
+}
+.calendar-calendar td.calendar-agenda-hour .calendar-hour {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.calendar-calendar td.calendar-agenda-hour .calendar-ampm {
+  font-size: 1em;
+}
+.calendar-calendar td.calendar-agenda-items {
+  text-align: left;
+  border: 1px #333 dotted;
+}
+.calendar-calendar td.calendar-agenda-items div.calendar {
+  width: auto;
+  margin: 0;
+  padding: 0.25em;
+}
+.calendar-calendar div.calendar div.inner .calendar-agenda-empty {
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+/**
+ * The popup date selector for jumping to a new date.
+ */
+.calendar-date-select form {
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+.calendar-date-select div,
+.calendar-date-select input,
+.calendar-date-select label {
+  float: right;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.calendar-date-select .description {
+  float: right;
+}
+.calendar-label {
+  display: block;
+  clear: both;
+  font-weight: bold;
+}
+
+.calendar-calendar div.date-nav {
+  width: auto;
+  color: #777;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+}
+.calendar-calendar div.date-nav a,
+.calendar-calendar div.date-nav h3 {
+  color: #777;
+}
+.calendar-calendar th.days {
+  color: #777;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  font-weight: bold;
+}
+.calendar-calendar td.empty {
+  border-color: #ccc;
+  background: #ccc;
+}
+.calendar-calendar table.mini td.empty {
+  border-color: #fff;
+  background: #fff;
+}
+.calendar-calendar td div.day {
+  margin-bottom: 2px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-right: none;
+}
+.calendar-calendar td .inner div,
+.calendar-calendar td .inner div a {
+  background: #eee;
+}
+
+/**
+ * Set small font size for all items in calendar div, themes can override this.
+ * Use x-small instead of em to avoid multiplying effect in nested items.
+ */
+.calendar-calendar div.calendar {
+  border: none;
+  font-size: x-small;
+}
+.calendar-calendar td .inner div.calendar div,
+.calendar-calendar td .inner div.calendar div a {
+  padding: 0 2px;
+  border: none;
+  background: #ffc;
+}
+.calendar-calendar td .inner div.calendar div.calendar-more,
+.calendar-calendar td .inner div.calendar div.calendar-more a {
+  text-align: right;
+  color: #444;
+  background: #fff;
+}
+.calendar-calendar td .inner .view-field,
+.calendar-calendar td .inner .view-field a {
+  color: #444;
+  font-weight: normal;
+}
+
+.calendar-calendar td span.date-display-single,
+.calendar-calendar td span.date-display-start,
+.calendar-calendar td span.date-display-end,
+.calendar-calendar td span.date-display-separator {
+  font-weight: bold;
+}
+.calendar-calendar td .inner div.day a {
+  color: #4b85ac;
+}
+.calendar-calendar tr td.today,
+.calendar-calendar tr.odd td.today,
+.calendar-calendar tr.even td.today {
+  background-color: #c3d6e4;
+}
+.calendar-calendar
+  td
+  .inner
+  div.calendar
+  div
+  div.view-data-node-data-field-date-field-date-value {
+  border-bottom: 1px solid #ccc;
+}
+
+/**
+ * Calendar Pager classes.
+ */
+
+/* Basic layout */
+.calendar-pager {
+  display: flex;
+}
+
+.calendar-pager__items {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* stylelint-disable */
+/* Item styles */
+.calendar-pager__item {
+}
+
+/* Current page indicator */
+.pager__item--current {
+}
+/* stylelint-enable */
+
+/* Previous and next controls */
+.calendar-pager__item--control a {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.calendar-pager__item-title {
+  display: flex;
+  align-items: center;
+}
+
+/* stylelint-disable */
+
+.calendar-pager__item-title--backwards {
+}
+.calendar-pager__item-title--forward {
+}
+/* stylelint-enable */
+
+/**
+ * The following are not used by default but are available for themes.
+ *
+.calendar-calendar td.past {}
+.calendar-calendar td.future {}
+.calendar-calendar td.has-events {}
+.calendar-calendar td.has-no-events {}
+*/

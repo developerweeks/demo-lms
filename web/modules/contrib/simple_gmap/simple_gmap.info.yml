@@ -1,0 +1,15 @@
+name: 'Simple Google Maps'
+type: module
+description: 'Provides a Google Maps link/map formatter for simple Text fields.'
+package: Field types
+core_version_requirement: ^10.3 || ^11
+dependencies:
+  - field
+  - text
+test_dependencies:
+  - address
+
+# Information added by Drupal.org packaging script on 2025-01-22
+version: '3.1.1'
+project: 'simple_gmap'
+datestamp: 1737577618

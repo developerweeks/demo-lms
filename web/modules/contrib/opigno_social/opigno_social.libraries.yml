@@ -1,0 +1,24 @@
+posts_feed:
+  version: 1.x
+  js:
+    js/posts_feed.js: {}
+  dependencies:
+    - core/drupal.ajax
+    - core/jquery
+    - core/once
+
+post_sharing:
+  version: 1.x
+  js:
+    js/post_sharing.js: {}
+  dependencies:
+    - core/drupal.ajax
+    - core/jquery
+    - core/once
+
+post_form_behavior:
+  version: 1.x
+  js:
+    js/post_form_behavior.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,203 @@
+<?php
+
+/**
+ * @file
+ * Main functions of the module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\tour\Entity\Tour;
+use Drupal\tour\RenderCallbacks;
+
+/**
+ * Implements hook_help().
+ */
+function tour_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name == 'help.page.tour') {
+    $output = '<h2>' . t('About') . '</h2>';
+    $output .= '<p>' . t("The Tour module provides users with guided tours of the site interface. Each tour consists of several tips that highlight elements of the user interface, guide the user through a workflow, or explain key concepts of the website. For more information, see the <a href=':tour'>online documentation for the Tour module</a>.", [':tour' => 'https://www.drupal.org/documentation/modules/tour']) . '</p>';
+    $output .= '<h2>' . t('Uses') . '</h2>';
+    $output .= '<dl>';
+    $output .= '<dt>' . t('Viewing tours') . '</dt>';
+    $output .= '<dd>' . t("If a tour is available on a page, a <em>Tour</em> button will be visible in the toolbar. If you click this button the first tip of the tour will appear. The tour continues after clicking the <em>Next</em> button in the tip. To see a tour users must have the permission <em>Access tour</em> and JavaScript must be enabled in the browser") . '</dd>';
+    $output .= '<dt>' . t('Creating tours') . '</dt>';
+    $output .= '</dl>';
+    return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tour_theme(): array {
+  return [
+    // List views.
+    'tour_listing_table' => [
+      'variables' => [
+        'headers' => NULL,
+        'rows' => NULL,
+        'empty' => NULL,
+        'attributes' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function tour_toolbar(): array {
+  $items = [];
+  $items['tour'] = [
+    '#cache' => [
+      'contexts' => [
+        'user.permissions',
+      ],
+    ],
+  ];
+
+  if (!\Drupal::currentUser()->hasPermission('access tour')) {
+    return $items;
+  }
+
+  $helper_service = \Drupal::service('tour.helper');
+  $results = $helper_service->loadTourEntities();
+  $no_tips = empty($results);
+
+  if (!$helper_service->shouldEmptyBeHidden($no_tips)) {
+    $items['tour'] += [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#lazy_builder' => [
+          'tour.lazy_builders:renderTour',
+          [$no_tips],
+        ],
+        '#cache' => ['contexts' => ['url']],
+      ],
+      '#wrapper_attributes' => [
+        'class' => ['tour-toolbar-tab'],
+      ],
+      '#attached' => [
+        'library' => [
+          'tour/tour',
+        ],
+      ],
+    ];
+
+    // \Drupal\toolbar\Element\ToolbarItem::preRenderToolbarItem adds an
+    // #attributes property to each toolbar item's tab child automatically.
+    // Lazy builders don't support an #attributes property, so we need to
+    // add another render callback to remove the #attributes property. We start
+    // by adding the defaults, and then we append our own pre render callback.
+    $items['tour'] += \Drupal::service('plugin.manager.element_info')
+      ->getInfo('toolbar_item');
+    $items['tour']['#pre_render'][] = [
+      RenderCallbacks::class,
+      'removeTabAttributes',
+    ];
+  }
+  return $items;
+}
+
+/**
+ * Implements hook_page_bottom().
+ */
+function tour_page_bottom(array &$page_bottom): void {
+  if (!\Drupal::currentUser()->hasPermission('access tour')) {
+    return;
+  }
+
+  $helper_service = \Drupal::service('tour.helper');
+  $results = $helper_service->loadTourEntities();
+
+  if (!empty($results)) {
+    $tours = Tour::loadMultiple($results);
+
+    if (!empty($tours)) {
+      $page_bottom['tour'] = \Drupal::entityTypeManager()
+        ->getViewBuilder('tour')
+        ->viewMultiple($tours);
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for tour entities.
+ */
+function tour_tour_insert($entity): void {
+  \Drupal::service('plugin.manager.tour.tip')->clearCachedDefinitions();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update() for tour entities.
+ */
+function tour_tour_update($entity): void {
+  \Drupal::service('plugin.manager.tour.tip')->clearCachedDefinitions();
+}
+
+/**
+ * Implements hook_tour_tips_alter().
+ */
+function tour_tour_tips_alter(array $tour_tips, EntityInterface $entity): void {
+  if (\Drupal::service('module_handler')->moduleExists('language')) {
+    foreach ($tour_tips as $tour_tip) {
+      if ($tour_tip->get('id') == 'language-overview') {
+        if (Drupal::service('module_handler')->moduleExists('locale')) {
+          $additional_overview = t("This page also provides an overview of how much of the site's interface has been translated for each configured language.");
+        }
+        else {
+          $additional_overview = t("If the Interface Translation module is installed, this page will provide an overview of how much of the site's interface has been translated for each configured language.");
+        }
+        $tour_tip->set('body', $tour_tip->get('body') . '<br>' . $additional_overview);
+      }
+      elseif ($tour_tip->get('id') == 'language-continue') {
+        $additional_continue = '';
+        $additional_modules = [];
+        if (!Drupal::service('module_handler')->moduleExists('locale')) {
+          $additional_modules[] = \Drupal::service('extension.list.module')->getName('locale');
+        }
+        if (!Drupal::service('module_handler')->moduleExists('content_translation')) {
+          $additional_modules[] = \Drupal::service('extension.list.module')->getName('content_translation');
+        }
+        if (!empty($additional_modules)) {
+          $additional_continue = t('Depending on your site features, additional modules that you might want to install are:') . '<ul>';
+          foreach ($additional_modules as $additional_module) {
+            $additional_continue .= '<li>' . $additional_module . '</li>';
+          }
+          $additional_continue .= '</ul>';
+        }
+        if (!empty($additional_continue)) {
+          $tour_tip->set('body', $tour_tip->get('body') . '<br>' . $additional_continue);
+        }
+      }
+    }
+  }
+
+  if (\Drupal::service('module_handler')->moduleExists('dblog')) {
+    foreach ($tour_tips as $tour_tip) {
+      if ($tour_tip->get('id') == 'dblog-more-information') {
+        $body = $tour_tip->get('body');
+        // Tips can reference the help page conditionally, only create the link
+        // if the help module is enabled, else remove it.
+        if (\Drupal::moduleHandler()->moduleExists('help')) {
+          $body = str_replace('[help.page.dblog]', '<a href="' . Url::fromRoute('help.page', ['name' => 'dblog'])->toString() . '">the help text</a> and ', $body);
+        }
+        else {
+          $body = str_replace('[help.page.dblog]', '', $body);
+        }
+        $tour_tip->set('body', $body);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_modules_installed().
+ */
+function tour_modules_installed($modules, $is_syncing): void {
+  if (in_array('navigation', $modules)) {
+    \Drupal::service('messenger')->addWarning(t('Currently, <em>Tour</em> module does not have integration with <em>Navigation</em>, recommend following <a href="https://www.drupal.org/project/tour/issues/3489075">https://www.drupal.org/project/tour/issues/3489075</a> for when that does. For now use the Tour block.'));
+  }
+}

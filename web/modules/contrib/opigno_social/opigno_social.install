@@ -1,0 +1,260 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for the module.
+ */
+
+use Drupal\Core\Entity\EntityStorageException;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\opigno_social\Entity\OpignoPostInterface;
+use Drupal\user\Entity\Role;
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function opigno_social_install() {
+  \Drupal::configFactory()->getEditable('opigno_class.socialsettings')
+    ->set('enable_social_features', TRUE)
+    ->save(TRUE);
+
+  opigno_social_set_default_layout();
+
+  // Grant permissions to create posts.
+  $role = Role::load(AccountInterface::AUTHENTICATED_ROLE);
+  if ($role instanceof RoleInterface) {
+    $permissions = [
+      'use text format post_html',
+      'create opigno_post',
+    ];
+
+    foreach ($permissions as $permission) {
+      $role->grantPermission($permission);
+    }
+
+    try {
+      $role->save();
+    }
+    catch (EntityStorageException $e) {
+      watchdog_exception('opigno_social_exception', $e);
+    }
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function opigno_social_uninstall() {
+  // Drop data tables.
+  $schema = \Drupal::database()->schema();
+  $tables = [
+    'opigno_user_invitations',
+    'opigno_post',
+  ];
+
+  foreach ($tables as $table) {
+    if ($schema->tableExists($table)) {
+      $schema->dropTable($table);
+    }
+  }
+
+  // Set the previous layout as a default.
+  try {
+    $config = \Drupal::configFactory()->getEditable('opigno_dashboard.default.settings');
+    $config->set('positions', '{"1":[{"admin_label":"Training in progress","id":"views_block:latest_active_trainings-block"}, {"admin_label":"Recent messages","id":"views_block:private_message-block_dashboard"}],"2":[{"admin_label":"Opigno calendar block","id":"views_block:opigno_calendar-month_block"}],"3":[]}');
+    $config->set('columns', 3);
+    $config->save();
+  }
+  catch (\Exception $e) {
+    watchdog_exception('opigno_social_exception', $e);
+  }
+}
+
+/**
+ * Helper function to set the new default layout.
+ */
+function opigno_social_set_default_layout() {
+  // Set the new layout as a default for the dashboard.
+  try {
+    $config = \Drupal::configFactory()->getEditable('opigno_dashboard.default.settings');
+    $config->set('positions', '{"1":[{"admin_label":"User statistics","context_definitions":[],"id":"opigno_user_stats_block"},{"admin_label":"Connections","context_definitions":[],"id":"opigno_user_connections_block"}],"2":[{"admin_label":"Recent posts","context_definitions":[],"id":"opigno_social_wall_block"},{"admin_label":"Training in progress","id":"views_block:latest_active_trainings-block","mandatory":false}],"3":[{"admin_label":"Opigno calendar block","id":"views_block:opigno_calendar-month_block","mandatory":false}]}');
+    $config->set('columns', 5);
+    $config->save();
+  }
+  catch (\Exception $e) {
+    watchdog_exception('opigno_social_exception', $e);
+  }
+}
+
+/**
+ * Implements hook_update_last_removed().
+ */
+function opigno_social_update_last_removed() {
+  return 9001;
+}
+
+/**
+ * Import post_html text format.
+ */
+function opigno_social_update_9002() {
+  $configs = [
+    'core.entity_view_mode.opigno_post.preview',
+    'filter.format.post_html',
+    'views.view.opigno_social_posts',
+  ];
+  \Drupal::moduleHandler()->loadInclude('opigno_module', 'install');
+  _opigno_module_apply_update('opigno_social', '/config/optional', $configs);
+
+  // Set text format for all existing posts.
+  \Drupal::database()->update('opigno_post')
+    ->fields(['text__format' => OpignoPostInterface::POST_TEXT_FORMAT])
+    ->execute();
+
+  // Grant permissions to create posts.
+  $permissions = [
+    'use text format post_html',
+    'create opigno_post',
+  ];
+  $role = Role::load(AccountInterface::AUTHENTICATED_ROLE);
+  if ($role instanceof RoleInterface) {
+    foreach ($permissions as $permission) {
+      $role->grantPermission($permission);
+    }
+
+    try {
+      $role->save();
+    }
+    catch (EntityStorageException $e) {
+      watchdog_exception('opigno_social_exception', $e);
+    }
+  }
+}
+
+/**
+ * Add a link to the social page to the main site menu.
+ */
+function opigno_social_update_9003() {
+  $menu_link = MenuLinkContent::create([
+    'title' => t('Social'),
+    'link' => ['uri' => 'internal:/social-feed'],
+    'menu_name' => 'main',
+    'expanded' => FALSE,
+  ]);
+  try {
+    $menu_link->save();
+  }
+  catch (EntityStorageException $e) {
+    \Drupal::logger('opigno_social_exception')->error($e->getMessage());
+  }
+}
+
+/**
+ * Install post type entity and add a field to store post type (bundle).
+ */
+function opigno_social_update_9004() {
+  // Install new entity - "Post type".
+  $update_manager = \Drupal::entityDefinitionUpdateManager();
+  $entity_manager = \Drupal::service('entity_type.manager');
+  $entity_manager->clearCachedDefinitions();
+  $entity_type = $entity_manager->getDefinition('opigno_post_type');
+  if ($entity_type && $entity_type instanceof EntityTypeInterface) {
+    $update_manager->installEntityType($entity_type);
+  }
+
+  $schema = \Drupal::database()->schema();
+  $table = 'opigno_post';
+  $field = 'type';
+  if (!$schema->fieldExists($table, $field)) {
+    $schema->addField($table, $field, [
+      'type' => 'varchar',
+      'not null' => TRUE,
+      'length' => 64,
+      'default' => OpignoPostInterface::SOCIAL_POST_BUNDLE,
+      'description' => 'Machine name of the post bundle.',
+    ]);
+
+    $definition = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Type'))
+      ->setSetting('target_type', 'opigno_post_type')
+      ->setRequired(TRUE)
+      ->setReadOnly(TRUE);
+
+    $update_manager->installFieldStorageDefinition('type', 'opigno_post', 'opigno_social', $definition);
+  }
+
+  // Set the default post type for all existing entities.
+  \Drupal::database()->update('opigno_post')
+    ->fields(['type' => OpignoPostInterface::SOCIAL_POST_BUNDLE])
+    ->execute();
+
+  // Import configuration.
+  $optional = [
+    'views.view.opigno_social_posts',
+    'views.view.post_sharing_badges',
+  ];
+  \Drupal::moduleHandler()->loadInclude('opigno_module', 'install');
+  _opigno_module_apply_update('opigno_social', '/config/install', ['opigno_social.opigno_post_type.social']);
+  _opigno_module_apply_update('opigno_social', '/config/optional', $optional);
+}
+
+/**
+ * Remove posts/comments/likes for already deleted users.
+ */
+function opigno_social_update_9005() {
+  $posts_storage = \Drupal::entityTypeManager()->getStorage('opigno_post');
+  $uids = \Drupal::entityTypeManager()
+    ->getStorage('user')
+    ->getQuery()
+    ->accessCheck()
+    ->execute();
+  $pids = $posts_storage
+    ->getQuery()
+    ->accessCheck()
+    ->condition('uid', $uids, 'NOT IN')
+    ->execute();
+
+  if (empty($pids)) {
+    return;
+  }
+
+  $posts = $posts_storage->loadMultiple($pids);
+  try {
+    $posts_storage->delete($posts);
+  }
+  catch (EntityStorageException $e) {
+    watchdog_exception('opigno_social', $e);
+  }
+}
+
+/**
+ * Remove invitations for already deleted users.
+ */
+function opigno_social_update_9006() {
+  $invitation_storage = \Drupal::entityTypeManager()->getStorage('user_invitation');
+  $uids = \Drupal::entityTypeManager()
+    ->getStorage('user')
+    ->getQuery()
+    ->accessCheck()
+    ->execute();
+  $invitation_query = $invitation_storage->getQuery()->accessCheck();
+  $or_condition = $invitation_query->orConditionGroup()
+    ->condition('uid', $uids, 'NOT IN')
+    ->condition('invitee', $uids, 'NOT IN');
+  $invitation_ids = $invitation_query->condition($or_condition)->execute();
+
+  if (empty($invitation_ids)) {
+    return;
+  }
+
+  try {
+    $invitations = $invitation_storage->loadMultiple($invitation_ids);
+    $invitation_storage->delete($invitations);
+  }
+  catch (EntityStorageException $e) {
+    \Drupal::logger('opigno_social')->error($e->getMessage());
+  }
+}

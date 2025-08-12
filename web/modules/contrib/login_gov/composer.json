@@ -1,0 +1,18 @@
+{
+  "name": "drupal/login_gov",
+  "type": "drupal-module",
+  "description": "A plugin for the OpenID Connect module to support Login.gov.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/login_gov",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/login_gov",
+    "source": "https://git.drupalcode.org/project/login_gov"
+  },
+  "require": {
+    "drupal/key_asymmetric": "^1.1",
+    "drupal/openid_connect": "^3.0",
+    "firebase/php-jwt": "^6.3"
+  }
+}

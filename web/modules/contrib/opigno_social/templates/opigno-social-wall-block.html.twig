@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the Social wall block.
+ *
+ * Available variables:
+ * - user: the current user picture;
+ * - create_post_form: the form to create a new post;
+ * - attachment_links: form attachment links;
+ * - posts: the list of posts available for the current user;
+ * - new_posts_link: the link to scroll to the new posts.
+ */
+#}
+
+<div class="feed-section">
+  {{ create_post_form }}
+  <div class="btn-new-post__wrapper hidden">
+    {{ new_posts_link }}
+  </div>
+  <div class="opigno-pinned-post"></div>
+  {{ posts }}
+</div>

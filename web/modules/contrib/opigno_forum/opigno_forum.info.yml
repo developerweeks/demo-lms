@@ -1,0 +1,16 @@
+name: Opigno Forum
+type: module
+description: Opigno Forum.
+core_version_requirement: ^9 || ^10
+package: Opigno
+dependencies:
+  - drupal:forum
+  - group:group
+  - drupal:taxonomy
+  - group:gnode
+  - opigno_learning_path:opigno_learning_path
+
+# Information added by Drupal.org packaging script on 2024-09-30
+version: '3.2.7'
+project: 'opigno_forum'
+datestamp: 1727717641

@@ -1,0 +1,11 @@
+name: Opigno Tincan API
+description: API for sending Tincan statements to an LRS.
+package: Opigno
+core_version_requirement: ^9 || ^10
+type: module
+configure: opigno_tincan_api.settings_form
+
+# Information added by Drupal.org packaging script on 2024-09-30
+version: '3.2.7'
+project: 'opigno_tincan_api'
+datestamp: 1727718043

@@ -1,0 +1,113 @@
+{#
+/**
+ * @file
+ * Theme implementation to display user statistics page.
+ *
+ * Available variables:
+ * - user_info: the main user info;
+ * - stats: the user statistics block (trends and charts);
+ * - trainings: the trainings list table.
+ */
+#}
+{% set access_mode = user_info.access_mode ?? 'minimal' %}
+
+<div class="row user-statistics-page">
+  <div class="col-12">
+    {# The user info section. #}
+    <div class="content-box">
+      <div class="user-info">
+        {% if user_info.data.edit_link is not empty %}
+          <div class="edit-link">
+            <a href="{{ user_info.data.edit_link }}" title="{{ 'Edit'|t }}">
+              <i class="fi fi-rr-edit"></i>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if user_info.data.social_links is not empty %}
+        <div class="user-social-links">
+          {{ user_info.data.social_links }}
+        </div>
+      {% endif %}
+
+      <div class="user-info__section-top">
+        {# General user info. #}
+        <div class="user-info-photo-wrapper">
+          <div class="profile-info__pic">{{ user_info.picture }}</div>
+        </div>
+        <div class="user-info-text-container">
+          {% if user_info.data.connected %}
+            <div class="connected-with">
+              <i class="fi fi-rr-link"></i> <i>{{ 'Connected with'|t }}</i>
+            </div>
+          {% endif %}
+          <h2 class="user-info-name">{{ user_info.name|length > 50 ? user_info.name|slice(0, 50) ~ '...' : user_info.name }}</h2>
+          <div class="user-info-text-wrapper">
+            <div class="user-info-contacts">
+              {% if user_info.data.role is not empty %}
+                <p class="user-info-type">{{ user_info.data.role }}</p>
+              {% endif %}
+              <p class="user-info-username">
+                {{ user_info.username }}
+              </p>
+              {% if user_info.email is not empty %}
+                <p class="user-info-email">
+                  <a href="{{ 'mailto:' ~ user_info.email }}" target="_blank">{{ user_info.email }}</a>
+                </p>
+              {% endif %}
+            </div>
+
+            {% if access_mode == 'advanced' %}
+              {# Dates section. #}
+              <div class="user-info-dates">
+                <p class="user-info-date-joined">
+                  <span class="label">{{ 'Date joined'|t }}</span>
+                  <span>{{ user_info.data.join }}</span>
+                </p>
+                <p class="user-info-last-access">
+                  <span class="label">{{ 'Last access'|t }}</span>
+                  <span>{{ user_info.data.access }}</span>
+                </p>
+                <p class="user-info-date-joined">
+                  <span class="label">{{ 'Member for'|t }}</span>
+                  <span>{{ user_info.data.member_for }}</span>
+                </p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if access_mode == 'advanced' %}
+          <div class="user-info-connections d-none d-lg-block">
+            {{ user_info.data.connections }}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if access_mode == 'advanced' %}
+        {# Connections block for mobile. #}
+        <div class="content-box p-0 d-lg-none">
+          {{ user_info.data.connections }}
+        </div>
+
+        {# The user achievements section. #}
+        <div class="user-info__section-bottom">
+          {% for achievement in user_info.data.achievements %}
+            {{ achievement }}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    {# Trainings list. #}
+    {% if access_mode == 'advanced' and trainings is not empty %}
+      <div class="content-box trainings-list">
+        <h2>{{ 'Trainings'|t }}</h2>
+        <div class="trainings-list-wrapper">
+          {{ trainings }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>

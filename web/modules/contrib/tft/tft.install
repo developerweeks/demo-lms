@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the TFT module.
+ */
+
+/**
+ * Apply Form to add files.
+ */
+function tft_update_9003() {
+  \Drupal::moduleHandler()->loadInclude('opigno_module', 'install');
+  _opigno_module_apply_update('tft', 'config/optional', [
+    'core.entity_form_display.media.tft_file.default',
+    'core.entity_view_display.media.tft_file.default',
+    'entity_browser.browser.documents_file',
+  ]);
+}

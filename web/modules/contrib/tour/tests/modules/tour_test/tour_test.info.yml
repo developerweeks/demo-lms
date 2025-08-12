@@ -1,0 +1,12 @@
+name: Tour module tests
+type: module
+core_version_requirement: ^10.3 || ^11
+description: Tests module for tour module.
+package: Testing
+dependencies:
+  - drupal:tour
+
+# Information added by Drupal.org packaging script on 2025-07-11
+version: '2.0.11'
+project: 'tour'
+datestamp: 1752254092

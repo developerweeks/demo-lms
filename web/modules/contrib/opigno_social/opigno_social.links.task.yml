@@ -1,0 +1,4 @@
+entity.opigno_post_type.edit_form:
+  title: 'Edit'
+  route_name: entity.opigno_post_type.edit_form
+  base_route: entity.opigno_post_type.edit_form

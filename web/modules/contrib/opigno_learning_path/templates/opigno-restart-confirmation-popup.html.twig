@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the restart confirmation popup.
+ *
+ * Available varaibles:
+ * - restart_button: the link to restart training.
+ */
+#}
+
+<div class="modal modal-ajax fade lp-restart-confirmation" tabindex="-1" role="dialog" aria-label="{{ 'Confirmation'|t }}">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{ 'Do you want to restart the training?'|t }}</h2>
+      </div>
+      <div class="modal-body">{{
+        'Your previous <strong>progress</strong> and <strong>results</strong> for this training will be <strong>reset</strong>
+      if you restart it. Do you want to proceed with a restart?'|raw|t }}</div>
+      <div class="modal-actions">
+        <a href="{{ path('opigno_learning_path.close_modal') }}" data-dismiss="modal" class="use-ajax btn btn-rounded btn-cancel">{{ 'Cancel'|t }}</a>
+        {{ restart_button }}
+      </div>
+    </div>
+  </div>
+</div>

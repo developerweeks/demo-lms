@@ -1,0 +1,10 @@
+<div class="circle-progress">
+  {% set L = 2 * 3.14 * radius %}
+  {% set dashOffset = L - (L * progress) / 100 %}
+  <svg>
+    <circle cx="{{ radius }}" cy="{{ radius }}" r="{{ radius }}"></circle>
+    <circle cx="{{ radius }}" cy="{{ radius }}" r="{{ radius }}" stroke-width="10" stroke-dasharray="{{ L }}"
+            stroke-dashoffset="{{ dashOffset }}"></circle>
+  </svg>
+  <div class="circle-progress__text">{{ progress|round ~ '%' }}</div>
+</div>

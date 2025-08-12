@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Opigno Course module.
+ */
+
+/**
+ * Implements hook_update_last_removed().
+ */
+function opigno_course_update_last_removed() {
+  return 9001;
+}

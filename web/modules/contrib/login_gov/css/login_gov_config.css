@@ -1,0 +1,12 @@
+div.form-item-settings-verified-within-units {
+  display: inline-block;
+}
+
+div.form-item-settings-verified-within-count {
+  display: inline-block;
+}
+
+div.form-item-settings-require-piv {
+  margin-left: 1em;
+  margin-top: -0.75em;
+}

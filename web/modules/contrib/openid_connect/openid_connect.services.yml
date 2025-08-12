@@ -1,0 +1,33 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  openid_connect.openid_connect:
+    class: Drupal\openid_connect\OpenIDConnect
+    arguments:
+      # Wire arguments manually until externalauth provides autowiring aliases.
+      $authmap: '@externalauth.authmap'
+      $external_auth: '@externalauth.externalauth'
+  Drupal\openid_connect\OpenIDConnect: '@openid_connect.openid_connect'
+
+  plugin.manager.openid_connect_client:
+    class: Drupal\openid_connect\Plugin\OpenIDConnectClientManager
+    parent: default_plugin_manager
+  Drupal\openid_connect\Plugin\OpenIDConnectClientManager: '@plugin.manager.openid_connect_client'
+
+  openid_connect.claims:
+    class: Drupal\openid_connect\OpenIDConnectClaims
+  Drupal\openid_connect\OpenIDConnectClaims: '@openid_connect.claims'
+
+  openid_connect.state_token:
+    class: Drupal\openid_connect\OpenIDConnectStateToken
+  Drupal\openid_connect\OpenIDConnectStateTokenInterface: '@openid_connect.state_token'
+
+  openid_connect.session:
+    class: Drupal\openid_connect\OpenIDConnectSession
+  Drupal\openid_connect\OpenIDConnectSessionInterface: '@openid_connect.session'
+
+  openid_connect.autodiscover:
+    class: Drupal\openid_connect\OpenIDConnectAutoDiscover
+  Drupal\openid_connect\OpenIDConnectAutoDiscover: '@openid_connect.autodiscover'
