@@ -17086,7 +17086,7 @@ form .who-is__online #edit-cancel, .who-is__online form .form-submit, form .who-
   transition: 0.3s ease;
 }
 .step-list-aside a:hover {
-  background: var(--desktop-link);
+  background: var(--desktop-header-link-active);
 }
 .lp_step_explanation {
   background: none;
