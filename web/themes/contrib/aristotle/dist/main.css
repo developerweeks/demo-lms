@@ -17072,7 +17072,7 @@ form .who-is__online #edit-cancel, .who-is__online form .form-submit, form .who-
 }
 .step-list-aside .active a,
 .step-list-aside .active span {
-  background: var(--desktop-link);
+  background: var(--desktop-header-link-active);
 }
 .step-list-aside a,
 .step-list-aside span {
