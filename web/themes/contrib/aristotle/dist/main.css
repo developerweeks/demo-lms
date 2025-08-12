@@ -13936,11 +13936,20 @@ fieldset:disabled a.tabledrag-toggle-weight {
 .mat-buttons-wrapper .mat-button-toggle.mat-button-toggle-checked {
   background: #fff;
 }
+.mat-buttons-wrapper .mat-button-toggle ~ .detail-text.detail-text__free-nav {
+  display: block;
+}
+.mat-buttons-wrapper .mat-button-toggle ~ .detail-text.detail-text__guided {
+  display: none;
+}
 .mat-buttons-wrapper .mat-button-toggle.mat-button-toggle-checked ~ .detail-text {
   display: block;
 }
 .mat-buttons-wrapper .mat-button-toggle.mat-button-toggle-checked ~ .detail-text.detail-text__free-nav {
   display: none;
+}
+.mat-buttons-wrapper .mat-button-toggle.mat-button-toggle-checked ~ .detail-text.detail-text__guided {
+  display: block;
 }
 .mat-buttons-wrapper .mat-button-toggle.activate {
   background: var(--desktop-link);
